@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+ {% block content %}
+
+<header>
+  {% compress 'css' %}
+    <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/css">
+  {% endcompress %}
+</header>
+
+<div class="container">
+  <div class="logo"></div>
+  <div class="leftline"></div>
+
+  <div class="bottomline"></div>
+  <div class="dashboard">
+    <div class="row1">
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+    </div>
+    <div class="row2">
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+    </div>
+    <div class="fragment">
+      <div class="plus"></div>
+      <div class="question">Question of the Day</div>
+    </div>
+  </div>
+
+  <footer>
+  <div class="name">David Hunt</div>
+  <div class="footercontent">
+    <div class="stats">
+      <span class="left percentage">30%</span>
+      <span class="right metric">Technical</span>
+    </div>
+    <div class="completion">
+      <span class="left percentage">95%</span>
+      <span class="right metric">Completed</span>
+    </div>
+    <div class="streak">
+      <div class="left boxes"><div class="box"></div></div>
+      <span class="right metric">5 Day Streak</span>
+    </div>
+  </div>
+  </footer>
+
+</div>
+
+  {% endblock %}

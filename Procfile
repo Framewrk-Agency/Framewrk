@@ -1,1 +1,1 @@
-web: gunicorn mongodb_app:app --preload --workers 1
+web: gunicorn --chdir framewrkapp app:app
