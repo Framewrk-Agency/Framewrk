@@ -9,7 +9,9 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121192304-1"></script>
   <script src="/js/includes/jquery.min.js"></script>
-  <link rel="stylesheet" href="/css/main.min.css">
+  {% compress 'css' %}
+    <link href="{{ url_for('static', filename='less/home.less') }}" rel="stylesheet" type="text/css">
+  {% endcompress %}
 
 
   <script>
