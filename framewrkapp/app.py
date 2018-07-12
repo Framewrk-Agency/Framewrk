@@ -1,6 +1,5 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
-from mongoengine import connect
 from flask_static_compress import FlaskStaticCompress
 import logging
 from flask_wtf.csrf import CSRFProtect
@@ -8,7 +7,6 @@ from werkzeug.urls import url_parse
 from forms import LoginForm, SignupForm
 import app
 from models import user
-from forms import LoginForm
 from flask_login import login_manager, login_user, is_safe_url
 
 # Logs
@@ -26,6 +24,10 @@ app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
 app.config['COMPRESSOR_OUTPUT_DIR'] = '/build'
 app.config['COMPRESSOR_STATIC_PREFIX'] = '/static'
 
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    return render_template('/home.html', template="home-template")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -45,6 +47,7 @@ def signup():
     form = SignupForm()
     return render_template('/signup.html', form=form, template="form-page")
 
+
 @app.route("/dashboard", methods=['POST'])
 def dashboard():
     '''var user_id = req.body.id;
@@ -52,9 +55,6 @@ def dashboard():
     var geo = req.body.geo;
      res.render('created', {layout: 'default', template: 'created-page'});'''
     return render_template('/dashboard.html', template="dashboard-template")
-
-
-
 
 
 '''@app.route('/validateSignup', methods=['GET', 'POST'])

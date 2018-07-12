@@ -1,20 +1,18 @@
 import flask_login
 from flask_login import login_manager
 
-
-users = {'foo@bar.tld': {'password': 'secret'}}
-
-# User Sessions
-login_manager = flask_login.LoginManager()
-login_manager.login_view = 'login'
+users = {'test@example.com': {'password': 'secret'}}
 
 
 class User(flask_login.UserMixin):
+    """Generic user class."""
+
     pass
 
 
 @login_manager.user_loader
 def user_loader(email):
+    """Find users by email."""
     if email not in users:
         return
 
@@ -25,6 +23,7 @@ def user_loader(email):
 
 @login_manager.request_loader
 def request_loader(request):
+    """Not sure what this does yet."""
     email = request.form.get('email')
     if email not in users:
         return
@@ -40,4 +39,5 @@ def request_loader(request):
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
+    """User Failed Login."""
     return 'Unauthorized'
