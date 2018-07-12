@@ -9,16 +9,15 @@
 
 
 <form action="{{ url_for('dashboard') }}" method=post>
-  {{ form.csrf_token }}
-  <div class="name">
-     {{ form.email(placeholder='David Hunt') }} {{ form.email.label }}
-  </div>
   <div class="email">
-    {{ form.email }} {{ form.password.label }}
+     {{ form.email(placeholder='David Hunt') }}
+     {{ form.email.label }}
   </div>
-  <div class="website">
-     {{ form.email(placeholder='http://example.com') }} {{ form.website.label }}
+  <div class="password">
+    {{ form.password }}
+    {{ form.password.label }}
   </div>
+
   <input id="submit" type="submit" value="Submit">
 </form>
   {% endblock %}

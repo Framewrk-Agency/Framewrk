@@ -1,7 +1,8 @@
 import flask_login
-from flask_login import login_manager
+from flask import request
 
 users = {'test@example.com': {'password': 'secret'}}
+login_manager = flask_login.LoginManager()
 
 
 class User(flask_login.UserMixin):
@@ -33,7 +34,7 @@ def request_loader(request):
 
     # DO NOT ever store passwords in plaintext and always compare password
     # hashes using constant-time comparison!
-    user.is_authenticated = request.form['password'] == users[email]['password']
+    user.is_authenticated= request.form['password'] == users[email]['password']
     return user
 
 

@@ -37,5 +37,4 @@ class LoginForm(Form):
 
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
-    website = StringField('Email', validators=[DataRequired(), Email()])
-    submit = SubmitField('Register')
+    submit = SubmitField('Log In')

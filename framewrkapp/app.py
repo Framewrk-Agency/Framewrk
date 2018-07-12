@@ -1,13 +1,14 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request
-from wtforms import Form, BooleanField, StringField, PasswordField, validators
+from wtforms.ext.sqlalchemy.orm import model_form
+# from wtforms_alchemy import ModelForm
 from flask_static_compress import FlaskStaticCompress
 import logging
 from flask_wtf.csrf import CSRFProtect
 from werkzeug.urls import url_parse
 from forms import LoginForm, SignupForm
 import app
-from models import user
-from flask_login import login_manager, login_user, is_safe_url
+from models import User, users, login_manager
+from flask_login import login_user
 
 # Logs
 logging.basicConfig(level=logging.DEBUG)
@@ -27,23 +28,32 @@ app.config['COMPRESSOR_STATIC_PREFIX'] = '/static'
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    """Framewrk homepage."""
     return render_template('/home.html', template="home-template")
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if app.request.method == 'GET':
-        return render_template('/login.html', form=LoginForm, template="form-page")
-    if LoginForm.validate_on_submit():
+    """Login form."""
+    login_form = LoginForm(request.form)
+    # login_form = model_form(User, base_class=LoginForm)
+    if request.method == 'POST' and login_form.validate():
+        email = login_form['email']
+        # if request.form['password'] == users[email]['password']:
+        user = User()
+        user.id = email
         login_user(user)
-        app.flash('Logged in successfully.')
+        request.flash('Logged in successfully.')
         next = app.request.args.get('next')
-    if not is_safe_url(next):
-        return app.abort(400)
-    return app.redirect(next or app.url_for('index'))
+        if not is_safe_url(next):
+            return app.abort(400)
+        return app.redirect(next or app.url_for('index'))
+    return render_template('/login.html', form=login_form, template="form-page")
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    """Signup Form."""
     form = SignupForm()
     return render_template('/signup.html', form=form, template="form-page")
 
