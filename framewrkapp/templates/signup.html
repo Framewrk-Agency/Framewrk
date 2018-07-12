@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+
+ {% block content %}
+<header>
+  <div class="logo">
+    <img src="{{ url_for('static', filename='img/logo_dark.png') }}">
+  </div>
+</header>
+
+
+<form action="{{ url_for('dashboard') }}" method=post>
+  {{ form.csrf_token }}
+  <div class="name">
+     {{ form.name(placeholder='David Hunt') }} {{ form.name.label }}
+  </div>
+  <div class="email">
+    {{ form.email }} {{ form.email.label }}
+  </div>
+  <div class="password">
+    {{ form.password }} {{ form.password.label }}
+  </div>
+  <div class="password2">
+    {{ form.password2 }} {{ form.password2.label }}
+  </div>
+  <div class="website">
+     {{ form.email(placeholder='http://example.com') }} {{ form.website.label }}
+  </div>
+  <input id="submit" type="submit" value="Submit">
+</form>
+  {% endblock %}

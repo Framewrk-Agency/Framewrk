@@ -1,12 +1,7 @@
 import flask_login
 from flask_login import login_manager
 
-
 users = {'foo@bar.tld': {'password': 'secret'}}
-
-# User Sessions
-login_manager = flask_login.LoginManager()
-login_manager.login_view = 'login'
 
 
 class User(flask_login.UserMixin):
