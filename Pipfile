@@ -11,8 +11,10 @@ wtforms = "*"
 flask_assets = "*"
 flask_static_compress = "*"
 WTForms-Alchemy = "*"
+dnspython = "*"
+pymongo = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.6.6"
+python_version = "3.7.0"

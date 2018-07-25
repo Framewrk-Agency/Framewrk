@@ -1,15 +1,11 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request
-from wtforms.ext.sqlalchemy.orm import model_form
-# from wtforms_alchemy import ModelForm
 from flask_static_compress import FlaskStaticCompress
 import logging
-from flask_wtf.csrf import CSRFProtect
-from werkzeug.urls import url_parse
 from forms import LoginForm, SignupForm
 import app
 from models import User, users, login_manager
 from flask_login import login_user
-
+from db import users_col, questions_col, mindspaces_col
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
