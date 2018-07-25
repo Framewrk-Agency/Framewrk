@@ -23,9 +23,10 @@ app.config['COMPRESSOR_STATIC_PREFIX'] = '/static'
 
 
 @app.route('/', methods=['GET', 'POST'])
-def home():
-    """Framewrk homepage."""
-    return render_template('/home.html', template="home-template")
+def signup():
+    """Signup Form."""
+    signup_form = SignupForm()
+    return render_template('/signup.html', form=signup_form, template="form-page")
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -45,13 +46,6 @@ def login():
             return app.abort(400)
         return app.redirect(next or app.url_for('index'))
     return render_template('/login.html', form=login_form, template="form-page")
-
-
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-    """Signup Form."""
-    form = SignupForm()
-    return render_template('/signup.html', form=form, template="form-page")
 
 
 @app.route("/dashboard", methods=['POST'])
