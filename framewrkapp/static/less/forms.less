@@ -14,7 +14,6 @@
     margin-top: -83px;
 
     @media(max-width: 800px) {
-      top: 128px;
       height: 62px;
     }
 
@@ -45,7 +44,11 @@
       bottom: 0;
       padding: 50px 0 4px;
       border: 2px solid #000;
-      height: 501px;
+      height: fit-content;
+
+      #submit {
+          bottom: -46px;
+      }
     }
 
 
@@ -91,6 +94,13 @@
     margin: 50px auto 100px;
   }
 
+  .submitbutton {
+    padding: 20px;
+    background: #F0F1E4;
+    position: absolute;
+    bottom: -40px;
+  }
+
   input {
     font-family: 'Futura-Light', sans-serif;
     font-size: 1.5em;
@@ -121,6 +131,8 @@
     }
   }
 
+
+
   #submit {
     padding: 0 20px;
     font-family: 'Futura', sans-serif;
@@ -142,7 +154,7 @@
   }
 
   .login_button {
-    margin: 40px auto 20px
+    margin: 40px auto 20px;
     text-align: center;
     color: #272727;
   }
