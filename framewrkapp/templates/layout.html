@@ -12,8 +12,30 @@
   {% compress 'css' %}
     <link href="{{ url_for('static', filename='less/forms.less') }}" rel="stylesheet" type="text/less">
     <link href="{{ url_for('static', filename='less/main.less') }}" rel="stylesheet" type="text/less">
-    <link href="{{ url_for('static', filename='less/fonts.less') }}" rel="stylesheet" type="text/less">
   {% endcompress %}
+  <!-- fonts -->
+  <style>
+  @font-face {
+    font-family: 'Futura-Light';
+    src: {{ url_for('static', filename='/fonts/Linotype - FuturaLTPro-Light.otf') }};
+    )
+  }
+
+  @font-face {
+    font-family: 'Futura-Book';
+    src: url({{ url_for('static', filename='/fonts/Linotype - FuturaLTPro-Book.otf') }} );
+  }
+
+  @font-face {
+    font-family: 'Futura-Bold';
+    src: url({{ url_for('static', filename='/fonts/Linotype - FuturaLTPro-Bold.otf') }} );
+  }
+
+  @font-face {
+    font-family: 'Futura-Medium';
+    src: url({{ url_for('static', filename='/fonts/Linotype - FuturaLTPro-Medium.otf') }} );
+  }
+  </style>
 
 
   <script>

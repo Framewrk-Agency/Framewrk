@@ -2,7 +2,6 @@ from flask import Flask, url_for, render_template, Markup, redirect, request
 from flask_static_compress import FlaskStaticCompress
 import logging
 from forms import LoginForm, SignupForm
-import app
 from models import User, users, login_manager
 from flask_login import login_user
 from db import users_col, questions_col, mindspaces_col
@@ -11,15 +10,14 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Initiate app
 app = Flask(__name__)
-login_manager.init_app(app)
+# login_manager.init_app(app)
 
 # Static Files
-compress = FlaskStaticCompress(app)
-app.static_folder = 'static'
-app.config.from_object('config')
 app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
-app.config['COMPRESSOR_OUTPUT_DIR'] = '/build'
-app.config['COMPRESSOR_STATIC_PREFIX'] = '/static'
+app.config['COMPRESSOR_OUTPUT_DIR'] = 'build'
+app.config['COMPRESSOR_STATIC_PREFIX'] = 'static'
+app.static_folder = 'static'
+compress = FlaskStaticCompress(app)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -50,6 +48,7 @@ def login():
 
 @app.route("/dashboard", methods=['POST'])
 def dashboard():
+    """Default Dashboard."""
     '''var user_id = req.body.id;
     var token = req.body.token;
     var geo = req.body.geo;
