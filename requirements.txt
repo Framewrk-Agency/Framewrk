@@ -1,4 +1,4 @@
-beautifulsoup4==4.6.0
+beautifulsoup4==4.6.1
 certifi==2018.4.16
 chardet==3.0.4
 click==6.7
@@ -6,7 +6,6 @@ decorator==4.3.0
 dnspython==1.15.0
 Flask==1.0.2
 Flask-Assets==0.12
-Flask-Less==0.4
 Flask-Login==0.4.1
 Flask-Static-Compress==1.0.2
 gunicorn==19.9.0
@@ -16,10 +15,8 @@ intervals==0.8.1
 itsdangerous==0.24
 jac==0.17.1
 Jinja2==2.10
-lesscpy==0.13.0
 MarkupSafe==1.0
 ordereddict==1.1
-ply==3.11
 pymongo==3.7.1
 requests==2.19.1
 rjsmin==1.0.12

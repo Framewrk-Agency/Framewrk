@@ -1,7 +1,5 @@
 import pymongo
 import os
-import requests
-import sys
 
 # DB Creds
 mongo = pymongo.MongoClient('mongodb+srv://todd:a9tw3rjw@hackerdata-gktww.gcp.mongodb.net/admin', maxPoolSize=50, connect=False)

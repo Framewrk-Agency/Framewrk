@@ -1,16 +1,15 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request
 from flask_static_compress import FlaskStaticCompress
-import logging
 from forms import LoginForm, SignupForm
 from models import User, users, login_manager
 from db import users_col, questions_col, mindspaces_col
+import logging
 
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
-# Initiate app
-app = Flask(__name__)
-# login_manager.init_app(app)
+# Initiate apps
+app = Flask(__name__, static_url_path='/static', static_folder="static", template_folder="templates")
 
 # Static Files
 app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
@@ -31,10 +30,8 @@ def signup():
 def login():
     """Login form."""
     login_form = LoginForm(request.form)
-    # login_form = model_form(User, base_class=LoginForm)
     if request.method == 'POST' and login_form.validate():
         email = login_form['email']
-        # if request.form['password'] == users[email]['password']:
         user = User()
         user.id = email
         login_user(user)
