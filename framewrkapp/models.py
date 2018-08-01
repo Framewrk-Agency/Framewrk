@@ -1,5 +1,6 @@
 import flask_login
 from flask import request
+import flask_login
 
 users = {'test@example.com': {'password': 'secret'}}
 login_manager = flask_login.LoginManager()
