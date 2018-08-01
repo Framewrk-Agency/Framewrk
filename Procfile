@@ -1,1 +1,1 @@
-web: gunicorn --chdir framewrkapp app:app
+web: gunicorn app:app
