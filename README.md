@@ -7,7 +7,7 @@ Building better humans.
 ![Flask-WTF](https://img.shields.io/badge/FlaskWTF-0.14.2-blue.svg?longCache=true&style=flat-square)
 ![gunicorn](https://img.shields.io/badge/Gunicorn-19.9.0-black.svg?longCache=true&style=flat-square)
 
-![intro](https://img.shields.io/badge/Gunicorn-19.9.0-black.svg?longCache=true&style=flat-square)
+![Github](https://s3.amazonaws.com/framewrk/Screen+Shot+2018-08-01+at+2.03.15+AM.png)
 
 Entrepreneurs are boxed in, they're trapped, they’ve been told to live in four distinct walls. The walls of business models, customers, teams, and competition. And on the outside of these four walls are dreams; staring at entrepreneurs, looking at them, waiting for them to break the fourth wall and engage with them, to invite the audience of their dreams onto the stage and experience greatness.
 
