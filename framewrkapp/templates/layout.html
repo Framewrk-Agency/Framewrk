@@ -10,7 +10,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121192304-1"></script>
   <script src="{{ url_for('static', filename='js/includes/jquery.min.js') }}"></script>
   {% compress 'css' %}
-    <link href="{{ url_for('static', filename='less/forms.less') }}" rel="stylesheet" type="text/less">
+    <link rel="stylesheet" type="text/less" href="{{ url_for('static', filename='less/forms.less') }}" />
     <link href="{{ url_for('static', filename='less/main.less') }}" rel="stylesheet" type="text/less">
   {% endcompress %}
   {% block head %}{% endblock %}

@@ -9,14 +9,14 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 # Initiate apps
-app = Flask(__name__, static_url_path='/static', static_folder="static", template_folder="templates")
-
-# Static Files
-app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
-app.config['COMPRESSOR_OUTPUT_DIR'] = 'build'
-app.config['COMPRESSOR_STATIC_PREFIX'] = 'static'
-app.static_folder = 'static'
+app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates")
 compress = FlaskStaticCompress(app)
+app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
+app.config['COMPRESSOR_STATIC_PREFIX'] = 'static'
+app.config['COMPRESSOR_OUTPUT_DIR'] = 'sdist'
+app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['Access-Control-Allow-Origin'] = '*'
+app.static_folder = 'static'
 
 
 @app.route('/', methods=['GET', 'POST'])
