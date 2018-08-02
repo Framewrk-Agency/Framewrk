@@ -29,23 +29,22 @@
     left: 0;
     bottom: 0;
     width: fit-content;
-    height: fit-content;
+    height: 80%;
+    @media(max-width: 700px) {
+      width: 90%;
+      height: fit-content;
+    }
 
     form {
       width: 600px;
-      padding: 100px 30px 50px;
+      padding: 100px 0 50px;
       border: 2px solid #000;
-      height: fit-content;
-
-      @media(max-width: 800px) {
-        width: 90%;
+      height: auto;
+      position: relative;
+      @media(max-width: 700px) {
+        width: 98%;
         margin: auto;
-        top: 0;
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        padding: 50px 0 4px;
+        padding: 70px 0 30px;
         border: 2px solid #000;
         height: fit-content;
 
@@ -58,14 +57,14 @@
       div {
         &.submitbutton {
           padding: 20px;
-          background: #F0F1E4;
+          background: #f5f1e5;
           position: absolute;
           left: 0;
           right: 0;
           width: fit-content;
           margin: auto;
           bottom: -45px;
-          @media(max-width: 800px){
+          @media(max-width: 800px) {
             bottom: -45px;
           }
         }
@@ -160,10 +159,10 @@
         background-color: #6E9FAC;
       }
     }
-
   }
+
   .loginsignup {
-    margin: 90px auto 20px;
+    margin: 70px auto 20px;
     text-align: center;
     color: #272727;
     background: transparent;
