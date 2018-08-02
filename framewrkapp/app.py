@@ -8,6 +8,7 @@ import logging
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
+# Initiate apps
 app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates")
 compress = FlaskStaticCompress(app)
 app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
@@ -55,7 +56,7 @@ def dashboard():
 '''@app.route('/validateSignup', methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('index'))
     form = SignupForm()
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
