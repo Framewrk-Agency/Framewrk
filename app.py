@@ -16,6 +16,11 @@ app.config['COMPRESSOR_STATIC_PREFIX'] = 'static'
 app.config['COMPRESSOR_OUTPUT_DIR'] = 'sdist'
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['Access-Control-Allow-Origin'] = '*'
+app.config['COMPRESSOR_CLASSES'] = [
+    'text/css': LessCompressor,
+    'text/less': LessCompressor,
+    'text/javascript': JavaScriptCompressor,
+]
 app.static_folder = 'static'
 
 
