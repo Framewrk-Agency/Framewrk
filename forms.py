@@ -1,5 +1,5 @@
 from wtforms import Form, StringField, PasswordField, validators, SubmitField
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from models import User
 
 
@@ -11,15 +11,14 @@ class SignupForm(Form):
         ])
     email = StringField('Email', validators=[
         DataRequired(),
-        Email()
+        Email(),
+        Length(min=6, max=35)
         ])
-    password = PasswordField('Password', validators=[
-        DataRequired()
-        ])
-    password2 = PasswordField('Repeat Password', validators=[
-        DataRequired(),
-        EqualTo('password')
-        ])
+    password = PasswordField('New Password', [
+        validators.DataRequired(),
+        validators.EqualTo('confirm', message='Passwords must match')
+    ])
+    confirm = PasswordField('Repeat Password')
     website = StringField('Website', validators=[
         DataRequired()
         ])

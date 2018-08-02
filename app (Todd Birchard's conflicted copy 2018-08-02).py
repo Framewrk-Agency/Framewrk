@@ -1,6 +1,5 @@
-from flask import Flask, url_for, render_template, Markup, redirect, request, flash
+from flask import Flask, url_for, render_template, Markup, redirect, request
 from flask_static_compress import FlaskStaticCompress
-from flask import session as login_session
 from forms import LoginForm, SignupForm
 from models import User, users, login_manager
 from db import users_col, questions_col, mindspaces_col
@@ -24,23 +23,6 @@ app.static_folder = 'static'
 def signup():
     """Signup Form."""
     signup_form = SignupForm()
-    if request.method == 'GET':
-        return render_template('/signup.html', form=signup_form, template="form-page")
-    if request.method == 'POST' and signup_form.validate():
-        error = Markup('<p class="error">Please submit a real email.</p>')
-        return render_template('/index.html', form=signup_form, error=error, template="form-page")
-    else:
-        document = {'name': request.form['name'],
-                    'email': request.form['email'],
-                    'password': request.form['password'],
-                    'website': request.form['website']
-                    }
-        # login_user(user)
-        result = users_col.replace_one({'email': document['email']}, document, upsert=True)
-        print('result = ', result)
-        sys.stdout.flush()
-        flash('Logged in successfully.')
-        redirect('dashboard.html')
     return render_template('/signup.html', form=signup_form, error='', template="form-page")
 
 
@@ -51,7 +33,26 @@ def login():
     return render_template('/login.html', form=login_form, template="form-page")
 
 
-@app.route("/dashboard", methods=['GET', 'POST'])
+@app.route('/validate', methods=['POST'])
+def validate():
+    if request.form.validate():
+         error = Markup('<p class="error">Please submit a real email.</p>')
+         return render_template('/index.html', error='Incorrect email.', template="home-template")
+    else:
+        document = {'name': request.form['name'],
+                'email': request.form.email,
+                'password': request.form.password,
+                'website': request.form.repo_url
+                }
+        # login_user(user)
+        result = users_col.replace_one({'email': document['email']}, document, upsert=True)
+        print('result = ', result)
+        sys.stdout.flush()
+        request.flash('Logged in successfully.')
+        redirect('dashboard.html')
+
+
+@app.route("/dashboard", methods=['POST'])
 def dashboard():
     """Default Dashboard."""
     '''var user_id = req.body.id;
@@ -59,11 +60,6 @@ def dashboard():
     var geo = req.body.geo;
      res.render('created', {layout: 'default', template: 'created-page'});'''
     return render_template('/dashboard.html', template="dashboard-template")
-
-
-@app.route("/frame", methods=['GET', 'POST'])
-def frame():
-    return render_template('/frame.html')
 
 
 '''@app.route('/validateSignup', methods=['GET', 'POST'])

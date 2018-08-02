@@ -33,6 +33,7 @@
     @media(max-width: 700px) {
       width: 90%;
       height: fit-content;
+      margin-top: 55px;
     }
 
     form {
@@ -74,11 +75,17 @@
       .name,
       .password,
       .password2,
-      .website {
+      .website,
+      .confirm {
         width: 70%;
         margin: auto;
         overflow: hidden;
         margin-bottom: 30px;
+
+        @media (max-width: 700px) {
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
       }
 
       label {
@@ -163,6 +170,18 @@
 
   .loginsignup {
     margin: 70px auto 20px;
+    text-align: center;
+    color: #272727;
+    background: transparent;
+    position: absolute;
+    /* padding: 20px 50px; */
+    left: 0;
+    right: 0;
+    font-family: 'Futura-Light';
+  }
+
+  .testlink {
+    margin: 100px auto 20px;
     text-align: center;
     color: #272727;
     background: transparent;

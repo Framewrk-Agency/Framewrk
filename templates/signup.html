@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
 
+{% from "_formhelpers.html" import render_field %}
+
 {% block content %}
 <div class="formwrapper">
-  <form action="{{ url_for('validate') }}" method=post>
+  <form method=post>
     <div class="logo">
       <img src="{{ url_for('static', filename='img/logo_dark.png') }}">
     </div>
@@ -15,8 +17,8 @@
     <div class="password">
       {{ form.password }} {{ form.password.label }}
     </div>
-    <div class="password2">
-      {{ form.password2 }} {{ form.password2.label }}
+    <div class="confirm">
+      {{ form.confirm }} {{ form.confirm.label }}
     </div>
     <div class="website">
       {{ form.website(placeholder='http://example.com') }} {{ form.website.label }}
@@ -28,6 +30,10 @@
   <div class="loginsignup">
     <span>Already have an account? <a href="{{ url_for('login') }}">Log in.</a><span>
     </div>
+    <div class="testlink">
+      <span>FOR TESTING: <a href="{{ url_for('dashboard') }}">See Dashboard</a><span>
+    </div>
 </div>
+
 
 {% endblock %}
