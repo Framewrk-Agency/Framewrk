@@ -2,8 +2,8 @@
   .logo {
     background: #f4f1e4 center center no-repeat;
     background-size: contain;
-    height: 60px;
-    width: 150px;
+    height: 107px;
+    width: 192px;
     margin: auto;
     padding: 20px;
     position: absolute;
@@ -27,13 +27,13 @@
     position: absolute;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: 131px;
     width: fit-content;
-    height: 80%;
+    height: fit-content;
     @media(max-width: 700px) {
-      width: 90%;
+      width: 96%;
       height: fit-content;
-      margin-top: 55px;
+
     }
 
     form {
@@ -131,6 +131,10 @@
       -ms-transition: all 0.3s ease-in-out;
       caret-color: #75969e;
 
+      @media(max-width: 600px) {
+        font-size: 1.2em;
+      }
+
       &:-moz-placeholder,
       &:-ms-input-placeholder,
       &::-moz-placeholder,
@@ -160,9 +164,10 @@
       display: block;
       transition: all 0.3s easeout;
       border: 0;
+      height: 55px;
 
       &:hover {
-        color: #e2dedb;
+        color: #000;
         background-color: #6E9FAC;
       }
     }
@@ -191,4 +196,16 @@
     right: 0;
     font-family: 'Futura-Light';
   }
+
+  ::-webkit-input-placeholder { opacity: 1; -webkit-transition: opacity .5s; transition: opacity .5s; }  /* Chrome <=56, Safari < 10 */
+:-moz-placeholder { opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s; } /* FF 4-18 */
+::-moz-placeholder { opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s; } /* FF 19-51 */
+:-ms-input-placeholder { opacity: 1; -ms-transition: opacity .5s; transition: opacity .5s; } /* IE 10+ */
+::placeholder { opacity: 1; transition: opacity .5s; } /* Modern Browsers */
+
+*:focus::-webkit-input-placeholder { opacity: 0; } /* Chrome <=56, Safari < 10 */
+*:focus:-moz-placeholder { opacity: 0; } /* FF 4-18 */
+*:focus::-moz-placeholder { opacity: 0; } /* FF 19-50 */
+*:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
+*:focus::placeholder { opacity: 0; } /* Modern Browsers */
 }

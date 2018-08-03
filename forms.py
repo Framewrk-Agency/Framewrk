@@ -1,4 +1,4 @@
-from wtforms import Form, StringField, PasswordField, validators, SubmitField
+from wtforms import Form, StringField, PasswordField, validators, SubmitField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from models import User
 
@@ -14,7 +14,7 @@ class SignupForm(Form):
         Email(),
         Length(min=6, max=35)
         ])
-    password = PasswordField('New Password', [
+    password = PasswordField('Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message='Passwords must match')
     ])
@@ -37,3 +37,10 @@ class LoginForm(Form):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Log In')
+
+
+class addItems(Form):
+    """Add items to roadmap."""
+
+    add = SelectField(label="Add to your roadmap.")
+    submit = SubmitField('OK')

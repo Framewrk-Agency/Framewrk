@@ -53,7 +53,7 @@ def login():
 
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
-    """Default Dashboard."""
+    """Landing Page Dashboard."""
     '''var user_id = req.body.id;
     var token = req.body.token;
     var geo = req.body.geo;
@@ -63,7 +63,14 @@ def dashboard():
 
 @app.route("/frame", methods=['GET', 'POST'])
 def frame():
-    return render_template('/frame.html')
+    app.template_folder = 'templates'
+    return render_template('/frame.html',)
+
+
+
+@app.route('/call_modal', methods=['GET', 'POST'])
+def call_modal():
+    redirect(url_for('/dashboard') + '#myModal')
 
 
 '''@app.route('/validateSignup', methods=['GET', 'POST'])
