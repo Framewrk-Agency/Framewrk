@@ -1,23 +1,22 @@
 {% extends "layout.html" %}
 
  {% block content %}
-
 <header>
   {% compress 'css' %}
-    <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/css">
-    <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/less">
+    <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/less">
   {% endcompress %}
 </header>
 
 <div class="container">
+  {% include 'nav.html' %}
   <div class="logo"></div>
-   {% block nav %} {% endcontent %}
+
 
   <div class="main-content">
-    <div class="discovery"></div>
-    <div class="frame"></div>
-    <div class="support"></div>
+
   </div>
+  {% include 'footer.html' %}
 
   <div class="bottomline"></div>
   <div class="dashboard">
@@ -40,28 +39,12 @@
       <div class="plus"></div>
       <!--<div class="question">Question of the Day</div>-->
     </div>
+
   </div>
 
   <div>
 
-  <footer>
-  <div class="name">David Hunt</div>
-  <div class="footercontent">
-    <div class="stats">
-      <span class="left percentage">30%</span>
-      <span class="right metric">Technical</span>
-    </div>
-    <div class="completion">
-      <span class="left percentage">95%</span>
-      <span class="right metric">Completed</span>
-    </div>
-    <div class="streak">
-      <div class="left boxes"><div class="box"></div></div>
-      <span class="right metric">5 Day Streak</span>
-    </div>
-  </div>
-  </footer>
+
 
 </div>
-
-  {% endblock %}
+{% endblock %}

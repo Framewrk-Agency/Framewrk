@@ -1,23 +1,48 @@
 nav {
-  li {
-    height: 21px;
-    weight: 21px;
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:20px;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;*
 
-  .question {
-    background: url("/img/smalldiamond.png");
-  }
+  ul {
+    width: 21px;
+    padding: 0;
 
-  .question {
-    background: url("/img/smallsquare.png");
-  }
+    li {
+      height: 21px;
+      width: 21px;
+      display: block;
+      list-style: none;
+      margin-bottom: 20px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background-size: cover;
+      transition: all .3s easeout;
 
-  .question {
-    background: url("/img/smalltriangle.png");
-  }
+      &:hover {
+        opacity:.8;
+        cursor: pointer;
+      }
+    }
 
-  .question {
-    background: url("/img/help.png");
-  }
+    .question {
+      background: url("/img/smalldiamond.png");
+    }
 
+    .discover {
+      background: url("/img/smallsquare.png");
+    }
+
+    .interact {
+      background: url("/img/smalltriangle.png");
+    }
+
+    .help {
+      background: url("/img/help.png");
+    }
+  }
 }
