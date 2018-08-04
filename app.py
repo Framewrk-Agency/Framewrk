@@ -18,6 +18,7 @@ app.config['COMPRESSOR_OUTPUT_DIR'] = 'sdist'
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['Access-Control-Allow-Origin'] = '*'
 app.static_folder = 'static'
+app.secret_key = 'my unobvious secret key'
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -65,7 +66,6 @@ def dashboard():
 def frame():
     app.template_folder = 'templates'
     return render_template('/frame.html',)
-
 
 
 @app.route('/call_modal', methods=['GET', 'POST'])
