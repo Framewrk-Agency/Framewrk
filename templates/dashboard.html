@@ -1,50 +1,23 @@
 {% extends "layout.html" %}
 
- {% block content %}
-<header>
+ {% block head %}
   {% compress 'css' %}
     <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/less">
     <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/less">
   {% endcompress %}
-</header>
+  {% endblock %}
 
 <div class="container">
   {% include 'nav.html' %}
   <div class="logo"></div>
 
-
   <div class="main-content">
+    {% block content %}
 
+    {% endblock %}
   </div>
   {% include 'footer.html' %}
 
-  <div class="bottomline"></div>
-  <div class="dashboard">
-    <div class="row1">
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-    </div>
-    <div class="row2">
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-    </div>
-    <div class="fragment">
-      <div class="plus"></div>
-      <!--<div class="question">Question of the Day</div>-->
-    </div>
+
 
   </div>
-
-  <div>
-
-
-
-</div>
-{% endblock %}

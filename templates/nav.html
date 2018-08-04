@@ -1,8 +1,8 @@
 <nav>
     <ul>
-      <li class="question">Question</li>
-      <li class="discover">Discover</li>
-      <li class="interact">Interact</li>
-      <li class="help">Help</li>
+      <a href="{{ url_for('question') }}"><li class="question">Question</li></a>
+      <a href="{{ url_for('discover') }}"><li class="discover">Discover</li></a>
+      <a href="{{ url_for('interact') }}"><li class="interact">Interact</li></a>
+      <a href="{{ url_for('help') }}"><li class="help">Help</li></a>
     </ul>
 </nav>

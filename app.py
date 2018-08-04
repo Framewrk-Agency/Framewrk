@@ -73,6 +73,27 @@ def call_modal():
     redirect(url_for('/dashboard') + '#myModal')
 
 
+@app.route('/question', methods=['GET', 'POST'])
+def question():
+    return render_template(url_for('/question.html'))
+
+
+@app.route('/discover', methods=['GET', 'POST'])
+def discover():
+    return render_template(url_for('/discover.html'))
+
+
+@app.route('/interact', methods=['GET', 'POST'])
+def interact():
+    return render_template(url_for('/interact.html'))
+
+
+@app.route('/help', methods=['GET', 'POST'])
+def help():
+    return render_template(url_for('/help.html'))
+
+
+
 '''@app.route('/validateSignup', methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
