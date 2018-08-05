@@ -1,11 +1,10 @@
 nav {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left:20px;
   height: fit-content;
   width: fit-content;
-  margin: auto;
+  margin: auto 20px;
+  top: 0;
+  bottom: 0;
 
   ul {
     width: 21px;
@@ -21,11 +20,14 @@ nav {
       white-space: nowrap;
       overflow: hidden;
       background-size: cover;
-      transition: all .3s easeout;
 
-      &:hover {
-        opacity:.5;
-        cursor: pointer;
+      a {
+        transition: all .3s easeout;
+
+        &:hover {
+          opacity:.5;
+          cursor: pointer;
+        }
       }
     }
 

@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 
+{% block pagestyles %}
+  {% compress 'css' %}
+    <link rel="stylesheet" type="text/less" href="{{ url_for('static', filename='less/forms.less') }}" />
+    <link href="{{ url_for('static', filename='less/main.less') }}" rel="stylesheet" type="text/less">
+  {% endcompress %}
+{% endblock %}
+
  {% block content %}
 <div class="formwrapper">
 <form method=post>

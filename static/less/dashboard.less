@@ -1,17 +1,33 @@
+@import "main";
+
 .dashboard-template {
   .logo {
-    background: url('../img/logo_dark.png');
+    background: url('../img/logo_color.png');
     background-size: cover;
-    height: 48px;
+    height: 55px;
     width: 120px;
   }
 
-  .container {
+  .dashlayout {
     max-width: 1100px;
     height: 800px;
     width: 100%;
     margin: 60px auto 0;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container{
+    width:85%;
+    max-width: none;
+  }
+
+  .placeholder {
+    width:80%;
+    height: 100%;
+    text-align: center;
+    background:#dadada;
   }
 
   .main-content {
@@ -118,10 +134,11 @@
 }
 
 footer {
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  margin: auto;
 
   img {
     padding:20px;
@@ -133,23 +150,4 @@ footer {
     margin: 0;
   }
 
-  .footercontent {
-    display: flex !important;
-    justify-content: space-around;
-    width: 860px;
-    border-top: 2px solid black;
-    margin: 14px 0 5px 30px;
-    padding-top: 10px;
-
-    & > div {
-      width: fit-content;
-      text-transform: uppercase;
-      display: inline-block;
-    }
-
-    .left {
-      font-family: 'Futura-Bold';
-      margin-right: 5px;
-    }
-  }
 }

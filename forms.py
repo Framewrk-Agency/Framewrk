@@ -6,22 +6,21 @@ from models import User
 class SignupForm(Form):
     """User Signup."""
 
-    name = StringField('Name', validators=[
-        DataRequired()
-        ])
-    email = StringField('Email', validators=[
-        DataRequired(),
-        Email(),
-        Length(min=6, max=35)
-        ])
-    password = PasswordField('Password', [
-        validators.DataRequired(),
-        validators.EqualTo('confirm', message='Passwords must match')
+    name = StringField('Name', [
+        validators.DataRequired(message=('Don\'t be shy!'))
     ])
-    confirm = PasswordField('Repeat Password')
-    website = StringField('Website', validators=[
-        DataRequired()
-        ])
+    email = StringField('Email', [
+        Length(min=6, message=(u'Little short for an email address?')),
+        Email(message=('That\'s not a valid email address.')),
+        DataRequired(message=('That\'s not a valid email address.'))
+    ])
+    password = PasswordField('Password', validators=[
+        DataRequired(message="Please enter a password."),
+    ])
+    confirm = PasswordField('Repeat Password', validators=[
+            EqualTo(password, message='Passwords must match.')
+            ])
+    website = StringField('Website')
     submit = SubmitField('Register')
 
     def validate_email(self, email):

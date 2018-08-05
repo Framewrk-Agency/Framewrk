@@ -1,23 +1,20 @@
 {% extends "layout.html" %}
 
- {% block head %}
-  {% compress 'css' %}
-    <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/less">
-    <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/less">
-  {% endcompress %}
+  {% block pagestyles %}
+    {% compress 'css' %}
+      <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/less">
+      <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/less">
+    {% endcompress %}
   {% endblock %}
 
-<div class="container">
-  {% include 'nav.html' %}
-  <div class="logo"></div>
 
-  <div class="main-content">
-    {% block content %}
-
-    {% endblock %}
+  {% block content %}
+  <div class="dashlayout">
+    <div class="sidebar">
+      <div class="logo"></div>
+      {% include 'nav.html' %}
+    </div>
+      {% include 'dashboardcontent.html' %}
   </div>
   {% include 'footer.html' %}
-
-
-
-  </div>
+  {% endblock %}

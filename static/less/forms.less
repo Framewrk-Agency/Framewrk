@@ -1,3 +1,5 @@
+@import "variables";
+
 .form-page {
   .logo {
     background: #f4f1e4 center center no-repeat;
@@ -101,6 +103,32 @@
       }
     }
 
+    .errors {
+      list-style: none;
+      position: absolute;
+      left: -150px;
+      margin-top: -80px;
+      padding: 15px;
+      background: #ecccd2;
+      color: #692929;
+      font-size: 12px;
+      width: 200px;
+      text-align: center;
+      white-space: nowrap;
+
+      &::before {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        border-left: 20px solid #ecccd2;
+        position: absolute;
+        right: -18px;
+        margin-top: -15px;
+      }
+    }
+
     body {
       font-family: 'Lato', sans-serif;
       background: #e2dedb;
@@ -129,7 +157,7 @@
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-ou;
       -ms-transition: all 0.3s ease-in-out;
-      caret-color: #75969e;
+      caret-color: @highlight_color;
 
       @media(max-width: 600px) {
         font-size: 1.3em;
@@ -145,8 +173,13 @@
         font-weight: 100;
       }
 
-      &:hover {
-        background: #e8e6e5;
+      &:focus {
+        background: lighten(@highlight_color, 35%);
+        border-bottom: 2px solid @highlight_color;
+
+        label {
+          color: @highlight_color;
+        }
       }
     }
 
@@ -208,4 +241,13 @@
 *:focus::-moz-placeholder { opacity: 0; } /* FF 19-50 */
 *:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
 *:focus::placeholder { opacity: 0; } /* Modern Browsers */
+
+.alert {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  margin-top: 80px;
+  width: 70%;
+  margin: 70px auto;
+}
 }
