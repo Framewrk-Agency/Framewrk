@@ -87,3 +87,9 @@ def interact():
 def help():
     """Entry point for help."""
     return render_template('/help.html', template='help-template')
+
+
+@app.route('/onboarding-type', methods=['GET', 'POST'])
+def onboardingtype():
+    """Business-type onboarding."""
+    return render_template('/onboarding.html', category='business', questiontext='What type of business do you have?')

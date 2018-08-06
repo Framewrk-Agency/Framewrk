@@ -4,6 +4,7 @@
     {% compress 'css' %}
       <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/less">
       <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/less">
+      <link href="{{ url_for('static', filename='less/onboarding.less') }}" rel="stylesheet" type="text/less">
     {% endcompress %}
   {% endblock %}
 
@@ -14,7 +15,7 @@
       <div class="logo"></div>
       {% include 'nav.html' %}
     </div>
-      {% include 'dashboardcontent.html' %}
+      {% include 'onboarding.html' %}
   </div>
   {% include 'footer.html' %}
   {% endblock %}

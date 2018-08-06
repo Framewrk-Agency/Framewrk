@@ -20,11 +20,9 @@ nav {
       white-space: nowrap;
       overflow: hidden;
       background-size: cover;
+      transition: all .3s easeout;
 
-      a {
-        transition: all .3s easeout;
-
-        &:hover {
+      a:hover {
           opacity:.5;
           cursor: pointer;
         }
@@ -47,4 +45,3 @@ nav {
       background: url("/img/help.png");
     }
   }
-}
