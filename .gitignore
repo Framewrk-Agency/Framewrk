@@ -102,7 +102,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-config.py
 
 archive
 archive/*
