@@ -2,7 +2,7 @@
 @import "main";
 
 .onboardingarea {
-  width: 90%;
+  width: 80%;
   height: 100%;
   text-align: center;
 
@@ -11,21 +11,21 @@
     width: 100px;
     margin: auto;
     border-bottom: 2px solid black;
+    cursor: grab;
 
     .shape {
       color: @highlight_color;
-      height: 80px;
-      width: 80px;
+      height: 70px;
+      width: 70px;
       margin-bottom: 20px;
       cursor: grab;
-      background: transparent;
 
       &.business {
         width: 0;
         height: 0;
-        border-left: 60px solid transparent;
+        border-left: 80px solid transparent;
         border-right: 0px solid transparent;
-        border-bottom: 60px solid @highlight_color;
+        border-bottom: 80px solid @highlight_color;
         margin: auto;
       }
 
@@ -59,21 +59,23 @@
         width: 20%;
         list-style: none;
         display:block;
-        margin: 10px;
+        margin: 20px;
 
       .dropzone {
-        border-bottom: 2px solid black;
-        margin-bottom:10px;
-        width:100%;
+        margin: 0 auto 20px auto;
+        width: 80%;
         height: 80px;
-        padding: 10px 30px;
+      }
+
+      hr {
+        border-width: 2px;
+        border-color: black;
+        display: block;
       }
 
       .label {
           width:100%;
           text-align:center;
-          font-size: .8em;
-          letter-spacing: 1px;
         }
       }
     }

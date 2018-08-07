@@ -1,14 +1,16 @@
 $( document ).ready(function() {
 
+  var selection = '';
 
   function handleDragStop( event, ui ) {
     var offsetXPos = parseInt( ui.offset.left );
     var offsetYPos = parseInt( ui.offset.top );
-    alert( "Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
+    console.log( "Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
   }
 
   function handleDropEvent( event, ui ) {
-    alert(this + " got dropped");
+    selection = $(this).attr('data-type');
+    console.log(selection);
   }
 
 
