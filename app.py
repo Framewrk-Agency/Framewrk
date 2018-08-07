@@ -1,9 +1,11 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash
 from flask_static_compress import FlaskStaticCompress
+from flask_assets import Bundle
 from flask import session as login_session
 from forms import LoginForm, SignupForm
 from models import User, users, login_manager
 from db import users_col, questions_col, mindspaces_col
+from config import heroku_flask_key
 import logging
 import sys
 
@@ -18,7 +20,7 @@ app.config['COMPRESSOR_OUTPUT_DIR'] = 'sdist'
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['Access-Control-Allow-Origin'] = '*'
 app.static_folder = 'static'
-app.secret_key = '\xc3\xc1\xf2\xe9\xd8\x14\\\x16\x9a\xbf\xee\x07'
+app.secret_key = heroku_flask_key
 
 
 @app.route('/', methods=['GET', 'POST'])
