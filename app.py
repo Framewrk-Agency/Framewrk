@@ -3,24 +3,20 @@ from flask_static_compress import FlaskStaticCompress
 from flask_assets import Bundle
 from flask import session as login_session
 from forms import LoginForm, SignupForm
+import config
 from models import User, users, login_manager
 from db import users_col, questions_col, mindspaces_col
-from config import heroku_flask_key
 import logging
 import sys
+import json
 
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates")
 compress = FlaskStaticCompress(app)
-app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
-app.config['COMPRESSOR_STATIC_PREFIX'] = 'static'
-app.config['COMPRESSOR_OUTPUT_DIR'] = 'sdist'
-app.config['CORS_HEADERS'] = 'Content-Type'
-app.config['Access-Control-Allow-Origin'] = '*'
-app.static_folder = 'static'
-app.secret_key = heroku_flask_key
+app.config.from_object('config.Config')
+json_data = open('onboarding.json').read()
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -81,17 +77,30 @@ def discover():
 
 @app.route('/interact', methods=['GET', 'POST'])
 def interact():
-    """Entry point for interact."""
+    """Audio submission portal."""
     return render_template('/interact.html', template='interact-template')
 
 
-@app.route('/help', methods=['GET', 'POST'])
-def help():
-    """Entry point for help."""
-    return render_template('/help.html', template='help-template')
-
-
-@app.route('/onboarding-type', methods=['GET', 'POST'])
-def onboardingtype():
+@app.route('/onboarding-business', methods=['GET', 'POST'])
+def onboardingbusiness():
     """Business-type onboarding."""
-    return render_template('/onboarding.html', category='business', questiontext='What type of business do you have?')
+    data = json.loads(json_data)
+    return render_template('/onboarding.html', category=data['business']['title'], questiontext=data['business']['question'])
+
+
+@app.route('/onboarding-customers', methods=['GET', 'POST'])
+def onboardingcustomers():
+    """Customer onboarding."""
+    return render_template('/onboarding.html', category='customers', questiontext='What stage are you at in customer understanding?')
+
+
+@app.route('/onboarding-competition', methods=['GET', 'POST'])
+def onboardingcompetition():
+    """Competition onboarding."""
+    return render_template('/onboarding.html', category='competition', questiontext='What stage are your competitors at?')
+
+
+@app.route('/onboarding-team', methods=['GET', 'POST'])
+def onboardingteam():
+    """Team onboarding."""
+    return render_template('/onboarding.html', category='team', questiontext='What stage is your team development at?')
