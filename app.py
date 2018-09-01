@@ -83,24 +83,24 @@ def interact():
 
 @app.route('/onboarding-business', methods=['GET', 'POST'])
 def onboardingbusiness():
-    """Business-type onboarding."""
+    """User business-type onboarding."""
     data = json.loads(json_data)
     return render_template('/onboarding.html', category=data['business']['title'], questiontext=data['business']['question'])
 
 
 @app.route('/onboarding-customers', methods=['GET', 'POST'])
 def onboardingcustomers():
-    """Customer onboarding."""
+    """User onboarding question."""
     return render_template('/onboarding.html', category='customers', questiontext='What stage are you at in customer understanding?')
 
 
 @app.route('/onboarding-competition', methods=['GET', 'POST'])
 def onboardingcompetition():
-    """Competition onboarding."""
+    """User competition onboarding."""
     return render_template('/onboarding.html', category='competition', questiontext='What stage are your competitors at?')
 
 
 @app.route('/onboarding-team', methods=['GET', 'POST'])
 def onboardingteam():
-    """Team onboarding."""
+    """User team onboarding."""
     return render_template('/onboarding.html', category='team', questiontext='What stage is your team development at?')
