@@ -1,22 +1,24 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash
 from flask_static_compress import FlaskStaticCompress
-from flask_assets import Bundle
+# from flask_assets import Bundle
 from flask import session as login_session
 from forms import LoginForm, SignupForm
 import config
 from models import User, users, login_manager
-from db import users_col, questions_col, mindspaces_col
+from db import users, questions, mindspaces, onboarding
 import logging
 import sys
 import json
+import sass
 
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
-app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates")
+app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
 compress = FlaskStaticCompress(app)
 app.config.from_object('config.Config')
 json_data = open('onboarding.json').read()
+sass.compile(dirname=('static/scss', 'static/build/css'), output_style='compressed')
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -31,7 +33,7 @@ def signup():
                         'website': request.form['website']
                         }
             # login_user(user)
-            result = users_col.replace_one({'email': document['email']}, document, upsert=True)
+            result = users.replace_one({'email': document['email']}, document, upsert=True)
             print('result = ', result)
             sys.stdout.flush()
             flash('Logged in successfully.')
@@ -54,7 +56,7 @@ def login():
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
     """Landing Page Dashboard."""
-    return render_template('/dashboard.html', template="dashboard-template")
+    return render_template('/dashboard.html', data=onboarding, template="dashboard-template")
 
 
 @app.route("/frame", methods=['GET', 'POST'])
@@ -84,8 +86,8 @@ def interact():
 @app.route('/onboarding-business', methods=['GET', 'POST'])
 def onboardingbusiness():
     """User business-type onboarding."""
-    data = json.loads(json_data)
-    return render_template('/onboarding.html', category=data['business']['title'], questiontext=data['business']['question'])
+    data = json.loads(onboarding)
+    return render_template('/onboarding.html', category=data.category, questiontext=data.question)
 
 
 @app.route('/onboarding-customers', methods=['GET', 'POST'])

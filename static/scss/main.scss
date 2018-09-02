@@ -1,8 +1,7 @@
-@import "dashboard";
 @import "splash";
 @import "variables";
 //@import "login";
-@theme-color: #6E9FAC;
+$theme-color: #6E9FAC;
 
 @font-face {
   font-family: 'Futura-Light';
@@ -45,7 +44,7 @@ html {
 
   a {
     transition: all 0.3s easeout;
-    color: @highlight_color;
+    color: $highlight_color;
 
     &:hover {
       cursor: pointer;

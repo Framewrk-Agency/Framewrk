@@ -1,5 +1,5 @@
 {
-  "business": {
+  "step1": {
     "title": "Business",
     "question": "What STAGE IS YOUR BUSINESS AT?",
     "answers": [
@@ -37,7 +37,7 @@
       }
     ]
   },
-  "business": {
+  "step2": {
     "title": "Customers",
     "question": "What stage are you at in customer understanding?",
     "answers": [

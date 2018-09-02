@@ -2,9 +2,14 @@
 @import "main";
 
 .onboardingarea {
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 800px;
   text-align: center;
+  margin-bottom: 150px;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 
   .pedestal {
     height: 100px;
@@ -14,7 +19,7 @@
     cursor: grab;
 
     .shape {
-      color: @highlight_color;
+      color: $highlight_color;
       height: 70px;
       width: 70px;
       margin-bottom: 20px;
@@ -25,7 +30,7 @@
         height: 0;
         border-left: 70px solid transparent;
         border-right: 0 solid transparent;
-        border-bottom: 70px solid @highlight_color;
+        border-bottom: 70px solid $highlight_color;
         margin: auto;
       }
     }
@@ -38,7 +43,7 @@
   }
 
   .label-selected {
-    color: @highlight_color !important;
+    color: $highlight_color !important;
     text-shadow: 0;
     font-family: 'Futura-Bold';
   }
@@ -50,8 +55,8 @@
   }
 
   .hr-selected {
-    border-color: @highlight_color !important;
-    border-width: 4px !important;
+    border-color: $highlight_color !important;
+    border-width: 2px !important;
     text-shadow: 0;
   }
 
@@ -75,15 +80,18 @@
 
     ul {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       margin-top: 52px;
+      padding: 0;
+      font-family: 'Futura-Medium';
 
       li {
         width: 20%;
         list-style: none;
         display: block;
         margin: 20px;
+        font-family: 'Futura-Medium';
 
         .dropzone {
           margin: 0 auto 20px;
@@ -92,7 +100,7 @@
         }
 
         hr {
-          border-width: 3px;
+          border-width: 1px;
           border-color: black;
           display: block;
           transition: all 0.4s easeout;
@@ -109,14 +117,35 @@
   }
 }
 
+.tooltip {
+  background: $highlight_color !important;
+  border-color: $highlight_color !important;
+  margin-top: 15px !important;
+}
+
+.tooltip-arrow {
+  margin-top: 0 !important;
+  position: absolute;
+}
+
+.tooltip-arrow.bottom {
+  background: $highlight_color !important;
+  border-color: $highlight_color !important;
+}
+
+
 .tooltip.bottom .tooltip-arrow {
-  background: @highlight_color !important;
-  border-color: @highlight_color !important;
-  border-bottom: 5px solid @highlight_color !important;
+  background: $highlight_color !important;
+  border-color: $highlight_color !important;
+  border-bottom: 5px solid $highlight_color !important;
+  border-top-color: $highlight_color !important;
+  border-bottom-color: $highlight_color !important;
+  border-left-color: $highlight_color !important;
+  border-right-color: $highlight_color !important;
 }
 
 .tooltip-inner {
-  background: @highlight_color !important;
+  background: $highlight_color !important;
   color: white !important;
   border-radius: 0 !important;
 }
@@ -126,12 +155,7 @@
   height: 70px;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 0;
-  right: 0;
   margin: auto;
-  bottom: -90px;
-  opacity: 0.1;
   transition: all 0.3s easeout;
 }
 
@@ -157,35 +181,6 @@
 
 
 
-.nextarrow {
-  position: relative;
-  display: block;
-  height: 60px;
-  width: 60px;
-  margin-top: -30px;
-}
-
-.nextarrow:after,
-.nextarrow:before {
-  content: "";
-  display: block;
-  position: absolute;
-  transition: all 0.5s ease-in-out;
-}
-
-.nextarrow:before {
-  top: 50%;
-  right: 0;
-  left: 15px;
-  width: 2em;
-  height: 2em;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transform: translate(0, -0.5em) rotate(136deg);
-  transform: translate(0, -0.5em) rotate(136deg);
-  box-shadow: inset -0.2em 0.2em 0 0 #000;
-  border-radius: 0 0.15em 0 0;
-}
 
 body {
   display: flex;
