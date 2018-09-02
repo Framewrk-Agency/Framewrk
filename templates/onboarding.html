@@ -1,59 +1,22 @@
+{% for step in data %}
 <div class="onboardingarea">
   <div class="pedestal">
-    <div class="shape business {{category}}" draggable="true"></div>
-    <h1>{{category}}</h1>
+    <div class="shape business {{step.category}}" draggable="true"></div>
+    <h1>{{step.category}}</h1>
   </div>
-
-  <h2 class="category">BUSINESS{{questiontext}}</h2>
-  <h3 class="question">What type of business do you have?</h2>
+  <h2 class="category">{{step.category}}</h2>
+  <h3 class="question">{{step.question}}</h2>
 
   <div class="answers">
     <ul>
+      {% for answer in step.options %}
       <li>
-        <div class="dropzone" data-type="product"></div>
+        <div class="dropzone" data-type="{{answer.name}}"></div>
         <hr>
-        <div class="label" data-toggle="tooltip" title="Physical or digital product business.">PRODUCT</div>
+        <div class="label" data-toggle="tooltip" title="{{answer.tooltip}}">{{answer.name}}</div>
       </li>
-      <li>
-        <div class="dropzone" data-type="service"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="Doing things to make lives better.">SERVICE</div>
-      </li>
-      <li>
-        <div class="dropzone" data-type="subscription"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="Passive income.">SUBSCRIPTION</div>
-      </li>
-      <li>
-        <div class="dropzone" data-type="marketplace"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="A platform for faciliating sales.">MARKETPLACE</div>
-      </li>
-      <li>
-        <div class="dropzone" data-type="ecosystem"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="Building communities.">ECOSYSTEM</div>
-      </li>
-      <li>
-        <div class="dropzone" data-type="brokerage"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="Money.">BROKERAGE</div>
-      </li>
-      <li>
-        <div class="dropzone" data-type="trade"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="You got any Charizards tho?">TRADE</div>
-      </li>
-      <li>
-        <div class="dropzone" data-type="other"></div>
-        <hr>
-        <div class="label" data-toggle="tooltip" title="I'm doing something different.">OTHER</div>
-      </li>
+      {% endfor %}
     </ul>
-    <a class="nextquestion">
-      <div class="nexttext">NEXT</div>
-      <div class="nextarrow"></div>
-    </a>
   </div>
-
 </div>
+  {% endfor %}

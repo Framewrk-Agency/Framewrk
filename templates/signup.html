@@ -1,12 +1,8 @@
-l{% extends "layout.html" %}
-
-{% from "_formhelpers.html" import render_field %}
+{% extends "layout.html" %}
 
 {% block pagestyles %}
-  {% compress 'css' %}
-    <link rel="stylesheet" type="text/less" href="{{ url_for('static', filename='less/forms.less') }}" />
-    <link href="{{ url_for('static', filename='less/main.less') }}" rel="stylesheet" type="text/less">
-  {% endcompress %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='build/css/forms.css') }}" type="text/css" />
+    <link href="{{ url_for('static', filename='build/css/main.css') }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block content %}

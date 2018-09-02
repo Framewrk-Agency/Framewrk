@@ -9,9 +9,6 @@ $( document ).ready(function() {
     console.log( "Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
   }
 
-
-
-
   $('.shape').draggable({
     cursor: 'grabbing',
     snap: '.dropzone',
@@ -51,4 +48,17 @@ $( document ).ready(function() {
       $('.nextquestion').addClass('nextquestion-active');
     }
   });
+
+  var question = 0;
+  var positions = [];
+
+  $('.onboardingarea').each(function() {
+    positions.push($(this).offset().top - $('.onboardingarea').offset().top);
+    console.log('position = ' + positions);
+  });
+
+  $('.nextarrow').on("click", function(){
+    question++;
+    $('.onboarding').animate({'margin-top': positions[question]*-1}, 800);
+  })
 });

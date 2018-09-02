@@ -1,21 +1,24 @@
 {% extends "layout.html" %}
 
   {% block pagestyles %}
-    {% compress 'css' %}
-      <link href="{{ url_for('static', filename='less/dashboard.less') }}" rel="stylesheet" type="text/less">
-      <link href="{{ url_for('static', filename='less/nav.less') }}" rel="stylesheet" type="text/less">
-      <link href="{{ url_for('static', filename='less/onboarding.less') }}" rel="stylesheet" type="text/less">
-    {% endcompress %}
+    <link href="{{ url_for('static', filename='build/css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='build/css/nav.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='build/css/onboarding.css') }}" rel="stylesheet">
   {% endblock %}
-
 
   {% block content %}
   <div class="dashlayout">
     <div class="sidebar">
-      <div class="logo"></div>
+      <div class="logo" style="{{ url_for('static', filename='img/logo_dark.png') }}"></div>
       {% include 'nav.html' %}
     </div>
+    <div class="onboarding">
       {% include 'onboarding.html' %}
+    </div>
   </div>
+  <a class="nextquestion">
+    <div class="nexttext">NEXT</div>
+    <div class="nextarrow"></div>
+  </a>
   {% include 'footer.html' %}
   {% endblock %}
