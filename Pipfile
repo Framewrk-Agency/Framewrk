@@ -15,7 +15,6 @@ WTForms-Alchemy = "*"
 dnspython = "*"
 pymongo = "*"
 jac = "*"
-lesscpy = "*"
 libsass = "*"
 
 [dev-packages]

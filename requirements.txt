@@ -15,6 +15,7 @@ intervals==0.8.1
 itsdangerous==0.24
 jac==0.17.2
 Jinja2==2.10
+lesscpy==0.13.0
 libsass==0.14.5
 MarkupSafe==1.0
 ordereddict==1.1

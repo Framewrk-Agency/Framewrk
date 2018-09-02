@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "89c964fa21d194571fa64879dac5faf79e15b659cdc1c93395010cc6ed6087e3"
+            "sha256": "ada0fbb4e4cba6c47e128bf658408efe8455738f3a38273a6890b8845d526ba4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -137,14 +137,6 @@
             ],
             "version": "==2.10"
         },
-        "lesscpy": {
-            "hashes": [
-                "sha256:72a38c751681e91e258825c1e826c38508c183f48b2e420e1a65d01eaa04bac3",
-                "sha256:f3c6d0b544c5bcdadcd3d8319feccb4128d06676d4117c6c9396ab39c25372ad"
-            ],
-            "index": "pypi",
-            "version": "==0.13.0"
-        },
         "libsass": {
             "hashes": [
                 "sha256:0f2e421d3e5a53833243e0a5f2cf7ebe9812725a7f27a797c38f3c7190ce2a82",
@@ -178,13 +170,6 @@
                 "sha256:1c35b4ac206cef2d24816c89f89cf289dd3d38cf7c449bb3fab7bf6d43f01b1f"
             ],
             "version": "==1.1"
-        },
-        "ply": {
-            "hashes": [
-                "sha256:00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3",
-                "sha256:096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce"
-            ],
-            "version": "==3.11"
         },
         "pymongo": {
             "hashes": [
