@@ -8,7 +8,7 @@ from bson.json_util import dumps
 import json
 
 # DB Creds
-mongo = MongoClient('mongodb+srv://todd:a9tw3rjw@hackerdata-gktww.gcp.mongodb.net/admin', maxPoolSize=50, connect=False)
+mongo = MongoClient('mongodb+srv://todd:a9tw3rjw@hackerdata-shard-00-00-gktww.gcp.mongodb.net/admin', maxPoolSize=50, connect=False)
 db = database.Database(mongo, 'framewrk')
 
 users_col = db['users']
