@@ -8,4 +8,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=['Flask'],
+    setup_requires=['libsass >= 0.14.5'],
+    sass_manifests={
+        'app': ('static/scss', 'static/css', '/static/css')
+    }
 )

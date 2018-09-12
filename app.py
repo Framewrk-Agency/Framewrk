@@ -31,8 +31,8 @@ js = Bundle('js/charts.js', 'js/dragdrop.js', 'js/interact.js', 'js/recordWorker
 assets = Environment(app)
 assets.register('js_all', scss)
 assets.register('scss_all', js)
-scss.build()
-js.build()
+# assets.build()
+# js.build()
 assets.init_app(app)
 
 
