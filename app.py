@@ -1,6 +1,6 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash
-from flask_static_compress import FlaskStaticCompress
-# from flask_assets import Bundle
+# from flask_static_compress import FlaskStaticCompress
+from flask_assets import Environment, Bundle, build
 from flask import session as login_session
 from forms import LoginForm, SignupForm
 import config
@@ -9,16 +9,31 @@ from db import users, questions, mindspaces, onboarding
 import logging
 import sys
 import json
-import sass
+from sassutils.wsgi import SassMiddleware
+
 
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
-compress = FlaskStaticCompress(app)
-app.config.from_object('config.Config')
+app.config.from_object('config.ProductionConfig')
 json_data = open('onboarding.json').read()
-sass.compile(dirname=('static/scss', 'static/build/css'), output_style='compressed')
+# sass.compile(dirname=('static/scss', 'static/build/css'), output_style='compressed')
+
+app.config.from_object('config.ProductionConfig')
+app.wsgi_app = SassMiddleware(app.wsgi_app, {
+    'app': ('static/scss', '/build/all.css', '/build/all.css')
+})
+
+scss = Bundle('scss/main.scss', filters='scss', output='build/style.css')
+js = Bundle('js/charts.js', 'js/dragdrop.js', 'js/interact.js', 'js/recordWorker.js', 'js/sidebar.js', filters='jsmin', output='build/main.js')
+
+assets = Environment(app)
+assets.register('js_all', scss)
+assets.register('scss_all', js)
+scss.build()
+js.build()
+assets.init_app(app)
 
 
 @app.route('/', methods=['GET', 'POST'])

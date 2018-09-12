@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   var selection = '';
-  $('[data-toggle="tooltip"]').tooltip({placement: "bottom"});
+  $('.answers [data-toggle="tooltip"]').tooltip({placement: "bottom"});
 
   function handleDragStop( event, ui ) {
     var offsetXPos = parseInt( ui.offset.left );

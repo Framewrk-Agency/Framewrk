@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function(){
   $('.sidenav').sidenav();
+  $('a[data-toggle="tooltip"]').tooltip({placement: "right"});
 });
-      

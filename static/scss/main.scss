@@ -1,5 +1,13 @@
-@import "splash";
-@import "variables";
+@import "components/splash";
+@import "components/variables";
+@import "components/dashboard";
+@import "components/forms";
+@import "components/nav";
+@import "components/onboarding";
+@import "components/roadmap";
+@import "components/splash";
+@import "components/variables";
+
 //@import "login";
 $theme-color: #6E9FAC;
 
