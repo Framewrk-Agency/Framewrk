@@ -1,5 +1,4 @@
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash
-# from flask_static_compress import FlaskStaticCompress
 from flask_assets import Environment, Bundle, build
 from flask import session as login_session
 from forms import LoginForm, SignupForm
