@@ -4,7 +4,7 @@ from flask import session as login_session
 from forms import LoginForm, SignupForm
 import config
 from models import User, users, login_manager
-from db import users, questions, mindspaces, onboarding
+from db import users, questions, onboarding
 import logging
 import sys
 import json
