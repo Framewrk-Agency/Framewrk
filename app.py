@@ -9,6 +9,7 @@ import logging
 import sys
 import json
 from sassutils.wsgi import SassMiddleware
+import sass
 
 
 # Logs
@@ -16,20 +17,21 @@ logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
 app.config.from_object('config.ProductionConfig')
-# sass.compile(dirname=('static/scss', 'static/build/css'), output_style='compressed')
+# sass.compile(filename='scss/main.scss', output_style='compressed')
 
 app.config.from_object('config.ProductionConfig')
 app.wsgi_app = SassMiddleware(app.wsgi_app, {
     'app': ('static/scss', '/build/all.css', '/build/all.css')
 })
 
-scss = Bundle('scss/main.scss', filters='scss', output='build/style.css')
-js = Bundle('js/charts.js', 'js/dragdrop.js', 'js/interact.js', 'js/recordWorker.js', 'js/sidebar.js', filters='jsmin', output='build/main.js')
+scss = Bundle('scss/main.scss', filters='pyscss', output='build/style.css',)
+js = Bundle('js/charts.js', 'js/dragdrop.js', 'js/interact.js', 'js/recordWorker.js', 'js/sidebar.js', output='build/main.js')
 
 assets = Environment(app)
 assets.register('js_all', scss)
 assets.register('scss_all', js)
-# assets.build()
+js.build()
+scss.build()
 # js.build()
 assets.init_app(app)
 
