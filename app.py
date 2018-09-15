@@ -16,7 +16,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
 app.config.from_object('config.ProductionConfig')
-json_data = open('onboarding.json').read()
 # sass.compile(dirname=('static/scss', 'static/build/css'), output_style='compressed')
 
 app.config.from_object('config.ProductionConfig')

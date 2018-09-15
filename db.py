@@ -19,3 +19,4 @@ mindspaces = json.loads(dumps(db.mindspaces.find()))
 onboarding = json.loads(dumps(db.onboarding.find()))
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+print('questions = ', questions)
