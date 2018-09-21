@@ -29,7 +29,84 @@
     max-width: none;
     height: 850px;
   }
+  /*
+  .main-content {
+    display: flex;
+    justify-content: space-around;
+    height: 800px;
+    align-items: center;
 
+    .frame,
+    .support,
+    .discovery {
+      display:block;
+      width:180px;
+      height:180px;
+      background-size: cover !important;
+      padding-bottom:10px;
+      margin-bottom: 10px;
+      border-bottom:1px solid black;
+      position: relative;
+      transition: all .3s easeout;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .8;
+      }
+    }
+
+    .frame {
+      background:url('../img/Square_w-element.png');
+
+      &::after{
+        content:"My Frame";
+        display:block;
+        position: absolute;
+        bottom: -60px;
+        left:0;
+        right:0;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: futura-medium;
+        font-size: 1.5em;
+      }
+    }
+
+    .support {
+      background:url('../img/Triangle_w-element.png');
+
+      &::after{
+        content:"Support";
+        display:block;
+        position: absolute;
+        bottom: -60px;
+        left:0;
+        right:0;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: futura-medium;
+        font-size: 1.5em;
+      }
+    }
+
+    .discovery {
+      background:url('../img/Diamond_w-element.png');
+
+      &::after{
+        content:"Discovery";
+        display:block;
+        position: absolute;
+        bottom: -60px;
+        left:0;
+        right:0;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: futura-medium;
+        font-size: 1.5em;
+      }
+    }
+
+  }*/
   .name {
     text-transform: uppercase;
     padding: 10px 16px;
