@@ -11,7 +11,6 @@ import json
 from sassutils.wsgi import SassMiddleware
 import sass
 
-
 # Logs
 logging.basicConfig(level=logging.DEBUG)
 
@@ -24,7 +23,7 @@ app.wsgi_app = SassMiddleware(app.wsgi_app, {
     'app': ('static/scss', '/build/all.css', '/build/all.css')
 })
 
-scss = Bundle('scss/main.scss', filters='pyscss', output='build/style.css',)
+scss = Bundle('scss/main.scss', 'scss/components/onboarding.scss', filters='pyscss', output='build/style.css',)
 js = Bundle('js/charts.js', 'js/dragdrop.js', 'js/interact.js', 'js/recordWorker.js', 'js/sidebar.js', output='build/main.js')
 
 assets = Environment(app)
@@ -32,7 +31,7 @@ assets.register('js_all', scss)
 assets.register('scss_all', js)
 js.build()
 scss.build()
-# js.build()
+
 assets.init_app(app)
 
 
