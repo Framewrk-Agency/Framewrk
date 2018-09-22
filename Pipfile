@@ -15,8 +15,6 @@ dnspython = "*"
 pymongo = "*"
 jac = "*"
 libsass = "*"
-scss = "*"
-sass = '*'
 
 [dev-packages]
 
