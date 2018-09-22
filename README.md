@@ -5,6 +5,10 @@ Building better humans.
 ![python](https://img.shields.io/badge/python-3.7.0-blue.svg?longCache=true&style=flat-square)
 ![flask](https://img.shields.io/badge/Flask-1.0.2-blue.svg?longCache=true&style=flat-square)
 ![Flask-WTF](https://img.shields.io/badge/FlaskWTF-0.14.2-blue.svg?longCache=true&style=flat-square)
+![Flask-Login](https://img.shields.io/badge/Flask-Login--0.4.1-blue.svg?longCache=true&style=flat-square)
+![libsass](https://img.shields.io/badge/libsass-0.15.0-pink.svg?longCache=true&style=flat-square)
+![boto3](https://img.shields.io/badge/boto3-1.9.9-green.svg?longCache=true&style=flat-square)
+![mongodb](https://img.shields.io/badge/MongoDB-4.0.0-green.svg?longCache=true&style=flat-square)
 ![gunicorn](https://img.shields.io/badge/Gunicorn-19.9.0-black.svg?longCache=true&style=flat-square)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Framewrk-Agency/Framewrk)
 

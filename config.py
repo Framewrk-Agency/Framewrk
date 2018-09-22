@@ -10,3 +10,5 @@ class ProductionConfig(object):
     STATIC_FOLDER = 'static'
     DEBUG = True
     ASSETS_DEBUG = True
+    FILEUPLOAD_S3_BUCKET = 'sample-bucket-name'                         # name of the S3 bucket
+    FILEUPLOAD_S3_ACL = 'public-read'                                   # S3 permission

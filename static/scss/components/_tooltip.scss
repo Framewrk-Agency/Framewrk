@@ -1,4 +1,5 @@
-// Base class
+@import "variables";
+
 .tooltip {
   position: absolute;
   z-index: $zindex-tooltip;
