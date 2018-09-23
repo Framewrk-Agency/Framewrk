@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+  {% assets "scss_all" %}
+    <link href="{{ ASSET_URL }}" rel="stylesheet">
+  {% endassets %}
+{% endblock %}
+
+ {% block content %}
+<div class="formwrapper">
+<form method=post>
+  <div class="logo">
+    <img src="{{ url_for('static', filename='img/logo_dark.png') }}">
+  </div>
+  <div class="email">
+     {{ form.email(placeholder='David Hunt') }}
+     {{ form.email.label }}
+  </div>
+  <div class="password">
+    {{ form.password }}
+    {{ form.password.label }}
+  </div>
+  <div class="submitbutton">
+    <input id="submit" type="submit" value="Submit">
+  </div>
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='build/css/forms.css') }}" type="text/css" />
+    <link href="{{ url_for('static', filename='build/css/main.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="formwrapper">
+  <form method=post>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='img/logo_dark.png') }}">
+    </div>
+    <div class="name">
+      {{ form.name(placeholder='David Hunt') }} {{ form.name.label }}
+      {% if form.name.errors %}
+        <ul class="errors">{% for error in form.name.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    <div class="email">
+      {{ form.email }} {{ form.email.label }}
+      {% if form.email.errors %}
+        <ul class="errors">{% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    <div class="password">
+      {{ form.password }} {{ form.password.label }}
+      {% if form.password.errors %}
+        <ul class="errors">{% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    <div class="confirm">
+      {{ form.confirm }} {{ form.confirm.label }}
+      {% if form.confirm.errors %}
+        <ul class="errors">{% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    <div class="website">
+      {{ form.website(placeholder='http://example.com') }} {{ form.website.label }}
+    </div>
+    <div class="submitbutton">
+      <input id="submit" type="submit" value="Submit">
+    </div>
+  </form>
+  <div class="loginsignup">
+    <span>Already have an account? <a href="{{ url_for('main.login') }}">Log in.</a><span>
+    </div>
+    <div class="testlink">
+      <span><i class="fal fa-exclamation-triangle"></i> FOR TESTING: <a href="{{ url_for('main.dashboard') }}">See Dashboard</a><span>
+    </div>
+</div>
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+</div>
+{% endfor %}
+
+{% endblock %}
