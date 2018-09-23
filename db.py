@@ -20,5 +20,5 @@ users = json.loads(dumps(db.users.find()))
 questions = json.loads(dumps(db.questions.find()))
 onboarding = json.loads(dumps(db.onboarding.find()))
 
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 print('questions = ', questions)

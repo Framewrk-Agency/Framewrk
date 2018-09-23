@@ -9,8 +9,8 @@ import sys
 import json
 from sassutils.wsgi import SassMiddleware
 import sass
-from flask_fileupload import FlaskFileUpload
-from flask_fileupload.storage.s3storage import S3Storage
+# from flask_fileupload import FlaskFileUpload
+# from flask_fileupload.storage.s3storage import S3Storage
 
 # Logs
 logging.basicConfig(level=logging.DEBUG)
