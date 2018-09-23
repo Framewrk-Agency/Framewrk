@@ -1,5 +1,6 @@
-from framewrk import create_app
+from framewrk create_app
+
+app = create_app()
 
 if __name__ == "__main__":
-    app = create_app()
-    app.run()
+    framewrk.run(host='0.0.0.0')
