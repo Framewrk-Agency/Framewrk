@@ -6,6 +6,7 @@ from models import User, users, login_manager
 from db import users, questions, onboarding
 import logging
 import sys
+import os
 import json
 from sassutils.wsgi import SassMiddleware
 import sass
@@ -13,29 +14,30 @@ import sass
 # from flask_fileupload.storage.s3storage import S3Storage
 
 # Logs
+
 logging.basicConfig(level=logging.DEBUG)
 
-app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
-app.config.from_object('config.ProductionConfig')
+framewrk = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
+framewrk.config.from_object('config.ProductionConfig')
 
-app.wsgi_app = SassMiddleware(app.wsgi_app, {
+framewrk.wsgi_framewrk = SassMiddleware(framewrk.app, {
     'app': ('static/scss', '/build/all.css', '/build/all.css')
 })
 
 scss = Bundle('scss/main.scss', 'scss/components/onboarding.scss', 'scss/components/_tooltip.scss', filters='pyscss', output='build/style.css',)
 js = Bundle('js/charts.js', 'js/dragdrop.js', 'js/interact.js', 'js/recordWorker.js', 'js/sidebar.js', output='build/main.js')
 
-assets = Environment(app)
+assets = Environment(framewrk)
 assets.register('js_all', scss)
 assets.register('scss_all', js)
 js.build()
 scss.build()
 
-assets.init_app(app)
+assets.init_framewrk(framewrk)
 session = Session()
 
 
-@app.before_request
+@framewrk.before_request
 def before_request():
     """Handle multiple users."""
     g.user = None
@@ -43,7 +45,7 @@ def before_request():
         g.user = session['username']
 
 
-'''@app.url_value_preprocessor
+'''@framewrk.url_value_preprocessor
 def url_value_preprocessor(endpoint, values):
     """Validate before every request."""
     if 'username' in session:
@@ -55,7 +57,7 @@ def url_value_preprocessor(endpoint, values):
             username = email.split('@')[0]'''
 
 
-@app.route('/', methods=['GET', 'POST'])
+@framewrk.route('/', methods=['GET', 'POST'])
 def signup():
     """Signup Form."""
     signup_form = SignupForm()
@@ -75,7 +77,7 @@ def signup():
     return render_template('/signup.html', form=signup_form, template="form-page")
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@framewrk.route('/login', methods=['GET', 'POST'])
 def login():
     """Login form."""
     login_form = LoginForm()
@@ -87,56 +89,56 @@ def login():
     return render_template('/login.html', form=login_form, template="form-page")
 
 
-@app.route("/dashboard", methods=['GET', 'POST'])
+@framewrk.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
     """Landing Page Dashboard."""
     return render_template('/dashboard.html', data=onboarding, template="dashboard-template")
 
 
-@app.route("/frame", methods=['GET', 'POST'])
+@framewrk.route("/frame", methods=['GET', 'POST'])
 def frame():
-    app.template_folder = 'templates'
+    framewrk.template_folder = 'templates'
     return render_template('/frame.html',)
 
 
-@app.route('/question', methods=['GET', 'POST'])
+@framewrk.route('/question', methods=['GET', 'POST'])
 def question():
     """Entry point for quetions."""
     return render_template('/question.html', template='qotd-template')
 
 
-@app.route('/discover', methods=['GET', 'POST'])
+@framewrk.route('/discover', methods=['GET', 'POST'])
 def discover():
     """Entry point for discover."""
     return render_template('/discover.html', template='questionaire-template')
 
 
-@app.route('/interact', methods=['GET', 'POST'])
+@framewrk.route('/interact', methods=['GET', 'POST'])
 def interact():
     """Audio submission portal."""
     return render_template('/interact.html', template='interact-template')
 
 
-@app.route('/onboarding-business', methods=['GET', 'POST'])
+@framewrk.route('/onboarding-business', methods=['GET', 'POST'])
 def onboardingbusiness():
     """User business-type onboarding."""
     data = json.loads(onboarding)
     return render_template('/onboarding.html', category=data.category, questiontext=data.question)
 
 
-@app.route('/onboarding-customers', methods=['GET', 'POST'])
+@framewrk.route('/onboarding-customers', methods=['GET', 'POST'])
 def onboardingcustomers():
     """User onboarding question."""
     return render_template('/onboarding.html', category='customers', questiontext='What stage are you at in customer understanding?')
 
 
-@app.route('/onboarding-competition', methods=['GET', 'POST'])
+@framewrk.route('/onboarding-competition', methods=['GET', 'POST'])
 def onboardingcompetition():
     """User competition onboarding."""
     return render_template('/onboarding.html', category='competition', questiontext='What stage are your competitors at?')
 
 
-@app.route('/onboarding-team', methods=['GET', 'POST'])
+@framewrk.route('/onboarding-team', methods=['GET', 'POST'])
 def onboardingteam():
     """User team onboarding."""
     return render_template('/onboarding.html', category='team', questiontext='What stage is your team development at?')

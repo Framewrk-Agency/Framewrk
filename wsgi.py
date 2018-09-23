@@ -1,4 +1,4 @@
-from app import app
-from config import ProductionConfig
+from app import framewrk
 
-app.config.from_object('ProductionConfig')
+if __name__ == "__main__":
+    app.run()
