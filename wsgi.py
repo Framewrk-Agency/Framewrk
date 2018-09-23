@@ -1,4 +1,4 @@
-from framewrk create_app
+from framewrk import create_app
 
 app = create_app()
 
