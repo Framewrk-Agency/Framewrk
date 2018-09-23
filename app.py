@@ -18,11 +18,6 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__, static_url_path='', static_folder="static", template_folder="templates",)
 app.config.from_object('config.ProductionConfig')
 
-# s3
-# s3storage = S3Storage()
-# ffu = FlaskFileUpload(app, s3storage)
-
-app.config.from_object('config.ProductionConfig')
 app.wsgi_app = SassMiddleware(app.wsgi_app, {
     'app': ('static/scss', '/build/all.css', '/build/all.css')
 })
