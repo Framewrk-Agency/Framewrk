@@ -1,3 +1,6 @@
+import os
+
+
 class ProductionConfig(object):
     """Config variables."""
 
@@ -10,9 +13,11 @@ class ProductionConfig(object):
     DEBUG = True
     ASSETS_DEBUG = True
     FILEUPLOAD_S3_BUCKET = 'sample-bucket-name'                         # name of the S3 bucket
-    FILEUPLOAD_S3_ACL = 'public-read'                                   # S3 permission
+    FILEUPLOAD_S3_ACL = 'public-read'
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))                                 # S3 permission
     # DB Creds
     # mongo = MongoClient('mongodb+srv://todd:a9tw3rjw@hackerdata-gktww.gcp.mongodb.net/admin?retryWrites=true', maxPoolSize=50, connect=False)
     # db = database.Database(mongo, 'framewrk')
+
 
 URI = 'mongodb://toddbirchard%40gmail.com:a9tw3rjw@stitch.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=framewrk-iroeq:mongodb-atlas:local-userpass'
