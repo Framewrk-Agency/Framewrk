@@ -108,3 +108,4 @@ archive/*
 runtime.txt
 Procfile
 static/webfonts
+setup.py
