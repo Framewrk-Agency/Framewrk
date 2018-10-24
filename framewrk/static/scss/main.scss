@@ -1,0 +1,69 @@
+@import "components/splash";
+@import "components/dashboard";
+@import "components/forms";
+@import "components/nav";
+@import "components/onboarding";
+@import "components/roadmap";
+@import "components/splash";
+
+$theme-color: #6E9FAC;
+$highlight_color: #6E9FAC;
+
+@font-face {
+  font-family: 'Futura-Light';
+  src: url('../static/fonts/FuturaLTPro-Light.otf');
+}
+
+@font-face {
+  font-family: 'Futura-Book';
+  src: url('../static/fonts/FuturaLTPro-Book.otf');
+}
+
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url('../static/fonts/FuturaLTPro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url('../static/fonts/FuturaLTPro-Medium.otf');
+}
+
+html {
+  background-color: #f4f1e4;
+  height: 100%;
+
+  body {
+    background-color: #f4f1e4;
+    font-family: 'Futura-Light', sans-serif;
+  }
+
+  p, a, span {
+    font-family: 'Futura-Light', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Futura-Bold', sans-serif;
+    text-transform: uppercase;
+    display: none;
+  }
+
+  a {
+    transition: all 0.3s easeout;
+    color: #6E9FAC;
+
+    &:hover {
+      cursor: pointer;
+      color: #6E9FAC;
+    }
+  }
+
+  input[type='submit'] {
+    transition: all 0.3s easeout;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #6E9FAC;
+    }
+  }
+}
