@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+
+{% block pagestyles %}
+{% endblock %}
+
+{% block content %}
+  {% for url in template_urls %}
+  <li>
+    <a href="{{url}}">{{url}}</a>
+  </li>
+  {% endfor %}
+{% endblock %}

@@ -10,12 +10,7 @@ import json
 from flask import Blueprint
 from flask_login import login_required
 
-
 main = Blueprint('main', __name__)
-
-
-
-
 
 '''@main.url_value_preprocessor
 def url_value_preprocessor(endpoint, values):
@@ -90,3 +85,9 @@ def onboardingcompetition():
 def onboardingteam():
     """User team onboarding."""
     return render_template('/onboarding.html', category='team', questiontext='What stage is your team development at?')
+
+@main.route('/directory', methods=['GET'])
+def directory():
+    """List all templates."""
+    template_urls = os.listdir('templates')
+    return render_template('/directory.html', templates=template_urls, template='directory-template')

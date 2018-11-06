@@ -19,3 +19,5 @@ __pycache__/
 /setup.cfg
 Pipfile
 Pipfile.lock
+framewrk/__pycache__
+.DS_Store
