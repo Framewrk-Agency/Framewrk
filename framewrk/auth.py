@@ -16,7 +16,7 @@ auth = Blueprint('auth', __name__)
 assets = Environment(app)
 scss = Bundle('scss/main.scss', 'scss/components/forms.scss', filters='libsass', output='build/css/style.css')
 assets.register('scss_all', scss)
-scss.build(disable_cache=None)
+# scss.build(disable_cache=None)
 
 
 @auth.route('/login', methods=['GET', 'POST'])
