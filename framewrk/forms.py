@@ -2,10 +2,8 @@ from flask import current_app, g
 from flask.cli import with_appcontext
 from wtforms import Form, StringField, PasswordField, validators, SubmitField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
-from .models import User
+from models import User
 import functools
-from . import views
-
 
 class SignupForm(Form):
     """User Signup."""

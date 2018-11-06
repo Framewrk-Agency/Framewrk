@@ -2,7 +2,7 @@ from flask import current_app, g
 from flask.cli import with_appcontext
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, Session
 from jinja2 import TemplateNotFound
-from .forms import LoginForm, SignupForm
+from forms import LoginForm, SignupForm
 import logging
 import sys
 import os
