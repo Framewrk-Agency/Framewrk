@@ -5,10 +5,9 @@ from flask import current_app as app
 import json
 import sass
 import bcrypt
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, login_manager
+from flask_login import login_user, login_required, logout_user
 from flask_assets import Environment, Bundle, build
 from forms import LoginForm, SignupForm
-
 
 auth = Blueprint('auth', __name__)
 assets = Environment(app)
@@ -69,6 +68,8 @@ def load_user(email):
     users = mongo.db.users
     return users.find_one({'email': email})
 '''
+
+
 # somewhere to logout
 @auth.route("/logout")
 @login_required

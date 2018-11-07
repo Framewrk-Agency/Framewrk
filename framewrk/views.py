@@ -1,8 +1,9 @@
+import os
 from flask import current_app, g
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, Session
 from jinja2 import TemplateNotFound
 from forms import LoginForm, SignupForm
-import os
+from flask_login import login_user, login_required
 import json
 from flask import Blueprint
 
@@ -85,5 +86,7 @@ def onboardingteam():
 @main.route('/directory', methods=['GET'])
 def directory():
     """List all templates."""
-    template_urls = os.listdir('templates')
+    test = os.listdir()
+    print(test)
+    template_urls = os.listdir('framewrk/templates')
     return render_template('/directory.html', templates=template_urls, template='directory-template')
