@@ -1,7 +1,5 @@
 import os
-from flask import current_app, g
-from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, Session
-from jinja2 import TemplateNotFound
+from flask import url_for, render_template, redirect, request, flash, Session, g
 from forms import LoginForm, SignupForm
 from flask_login import login_user, login_required
 import json

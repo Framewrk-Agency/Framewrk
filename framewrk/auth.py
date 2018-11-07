@@ -1,6 +1,6 @@
 import sys
 import os
-from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, session, Response, Blueprint
+from flask import render_template, redirect, request, flash, g, session, Response, Blueprint
 from flask import current_app as app
 import json
 import sass
