@@ -2,14 +2,14 @@ import sys
 import os
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, session, Response, Blueprint
 from flask import current_app as app
-import logging
 import json
 import sass
 import bcrypt
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, login_manager
 from flask_assets import Environment, Bundle, build
+import forms
 from forms import LoginForm, SignupForm
-from user import User
+import user
 
 
 auth = Blueprint('auth', __name__)
@@ -38,8 +38,6 @@ def login():
                     session['email'] = request.form['email']
                     return render_template('/dashboard.html', template="dashbord-template")
     return 'Invalid username/password combination'
-
-
 
 
 @auth.route('/', methods=['GET', 'POST'])

@@ -1,11 +1,10 @@
-from flask import current_app, g
-from flask.cli import with_appcontext
+from flask_wtf import FlaskForm
 from wtforms import Form, StringField, PasswordField, validators, SubmitField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from models import User
-import functools
 
-class SignupForm(Form):
+
+class SignupForm(FlaskForm):
     """User Signup."""
 
     name = StringField('Name', [
@@ -20,12 +19,13 @@ class SignupForm(Form):
         DataRequired(message="Please enter a password."),
     ])
     confirm = PasswordField('Repeat Password', validators=[
-            EqualTo(password, message='Passwords must match.')
-            ])
+        EqualTo(password, message='Passwords must match.')
+        ])
     website = StringField('Website')
     submit = SubmitField('Register')
 
-'''    def validate_email(self, email):
+
+'''   def validate_email(self, email):
         """Email validation."""
         users = g.db
         user = users.find_one({'email': email})
@@ -33,6 +33,7 @@ class SignupForm(Form):
         if user is not None:
             raise ValidationError('Please use a different email address.')
 '''
+
 
 class LoginForm(Form):
     """User Login."""

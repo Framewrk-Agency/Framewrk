@@ -2,9 +2,9 @@ from flask import current_app, g
 from flask.cli import with_appcontext
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, Session
 from jinja2 import TemplateNotFound
+import forms
 from forms import LoginForm, SignupForm
 import logging
-import sys
 import os
 import json
 from flask import Blueprint
@@ -24,7 +24,6 @@ def url_value_preprocessor(endpoint, values):
             username = email.split('@main.')[0]'''
 
 
-
 @main.route("/dashboard", methods=['GET', 'POST'])
 @login_required
 def dashboard():
@@ -35,7 +34,7 @@ def dashboard():
 @main.route("/frame", methods=['GET', 'POST'])
 @login_required
 def frame():
-    app.template_folder = 'templates'
+    main.template_folder = 'templates'
     return render_template('/frame.html',)
 
 
@@ -85,6 +84,7 @@ def onboardingcompetition():
 def onboardingteam():
     """User team onboarding."""
     return render_template('/onboarding.html', category='team', questiontext='What stage is your team development at?')
+
 
 @main.route('/directory', methods=['GET'])
 def directory():

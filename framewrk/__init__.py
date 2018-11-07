@@ -1,16 +1,17 @@
 import os
 import sys
 from flask import Flask, g
-from config import BaseConfig
-from flask_login import LoginManager
+import config
+import flask_login
 #from flask_pymongo import PyMongo
 # from models import User, users, login_manager
 
 
 def create_app():
+    """Construct app."""
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object('config.BaseConfig')
-    login = LoginManager()
+    login = flask_login.LoginManager()
 
     with app.app_context():
         from . import views

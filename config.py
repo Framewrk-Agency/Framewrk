@@ -16,7 +16,5 @@ class BaseConfig(object):
     ENV = 'development'
     FLASK_ENV = 'development'
     ASSETS_DEBUG = True
-    FILEUPLOAD_S3_BUCKET = 'sample-bucket-name'                         # name of the S3 bucket
-    FILEUPLOAD_S3_ACL = 'public-read'
     ROOT_DIR = os.path.dirname(os.path.realpath(__file__))
-    #MONGO_URI = 'mongodb+srv://framewrk_user:OjwLpzWvyCt4cFtg@hackerdata-gktww.gcp.mongodb.net/framewrk?retryWrites=true'
+    MONGO_URI = 'mongodb+srv://framewrk_user:OjwLpzWvyCt4cFtg@hackerdata-gktww.gcp.mongodb.net/framewrk?retryWrites=true'
