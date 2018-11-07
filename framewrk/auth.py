@@ -7,9 +7,7 @@ import sass
 import bcrypt
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, login_manager
 from flask_assets import Environment, Bundle, build
-import forms
 from forms import LoginForm, SignupForm
-import user
 
 
 auth = Blueprint('auth', __name__)

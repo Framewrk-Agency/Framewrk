@@ -1,14 +1,10 @@
 from flask import current_app, g
-from flask.cli import with_appcontext
 from flask import Flask, url_for, render_template, Markup, redirect, request, flash, g, Session
 from jinja2 import TemplateNotFound
-import forms
 from forms import LoginForm, SignupForm
-import logging
 import os
 import json
 from flask import Blueprint
-from flask_login import login_required
 
 main = Blueprint('main', __name__)
 
