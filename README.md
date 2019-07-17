@@ -1,5 +1,6 @@
 # Framewrk
-Questions are the answer.
+
+Framewrk is a platform to coach and provide a network for aspiring engineers.
 
 ![Python](https://img.shields.io/badge/Python-3.7-blue.svg?longCache=true&style=flat-square&logo=python&logoColor=white&colorA=4c566a&colorB=5e81ac)
 ![Flask](https://img.shields.io/badge/Flask-1.0.2-blue.svg?longCache=true&style=flat-square&logo=flask&colorA=4c566a&colorB=5e81ac)
@@ -14,6 +15,8 @@ Questions are the answer.
 [![GitHub Stars](https://img.shields.io/github/stars/Framewrk-Agency/Framewrk.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/Framewrk-Agency/Framewrk/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Framewrk-Agency/Framewrk.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/Framewrk-Agency/Framewrk/network)
 
+
+![Cover](https://framewrk.nyc3.cdn.digitaloceanspaces.com/img/github-image-3.jpg)
 
 ## Project
 
