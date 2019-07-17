@@ -1,0 +1,891 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/splash\.scss}line{font-family:\000031}}
+.splash {
+  height: 100%;
+  width: 100%; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/splash\.scss}line{font-family:\000035}}
+  .splash body {
+    height: 100%;
+    width: 100%;
+    position: relative; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/splash\.scss}line{font-family:\0000310}}
+    .splash .container {
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 300px; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/splash\.scss}line{font-family:\0000319}}
+      .splash .container .logo {
+        background: url("/img/logo_dark.png");
+        background-size: cover;
+        height: 48px;
+        width: 120px;
+        margin: auto;
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 62px; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/splash\.scss}line{font-family:\0000332}}
+        .splash .container .line {
+          width: 300px;
+          border-top: 2px solid black;
+          margin: 80px auto; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/splash\.scss}line{font-family:\0000338}}
+          .splash .container .headline {
+            font-family: 'Futura-Medium', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0 auto;
+            display: block;
+            width: fit-content; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\000036}}
+.dashboard-template .logo {
+  -size: cover;
+  height: 80px;
+  width: 180px; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000312}}
+  .dashboard-template .dashlayout {
+    max-width: 1100px;
+    height: 800px;
+    width: 100%;
+    margin: 60px auto 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000322}}
+    .dashboard-template .dashlayout .onboarding {
+      display: block;
+      justify-content: space-between;
+      flex-direction: column; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000329}}
+.dashboard-template .container {
+  width: 85%;
+  max-width: none;
+  height: 850px; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000335}}
+  .dashboard-template .name {
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 2px solid #000;
+    width: fit-content;
+    letter-spacing: 0.3em;
+    display: inline-block;
+    height: 17px; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000345}}
+    .dashboard-template .dashboard {
+      position: absolute; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000349}}
+      .dashboard-template .fragment {
+        text-transform: uppercase;
+        margin: auto;
+        width: 250px;
+        height: 60px;
+        margin: auto;
+        text-align: center;
+        letter-spacing: 0.1em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000360}}
+@media (max-width: 800px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000360}}
+  .sidebar {
+    display: none !important;   }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000365}}
+footer {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: auto; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000372}}
+  footer img {
+    padding: 20px; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000376}}
+    footer hr {
+      border: 1px solid black;
+      width: 100%;
+      margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000384}}
+.nextarrow {
+  position: relative;
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px; }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\0000393}}
+  .nextarrow:after, .nextarrow:before {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.5s ease-in-out; }
+
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/dashboard\.scss}line{font-family:\00003100}}
+    .nextarrow:before {
+      top: 50%;
+      right: 0;
+      left: 15px;
+      width: 2em;
+      height: 2em;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transform: translate(0, -0.5em) rotate(136deg);
+      transform: translate(0, -0.5em) rotate(136deg);
+      box-shadow: inset -0.2em 0.2em 0 0 #6E9FAC;
+      border-radius: 0 0.15em 0 0;
+      border-color: #6E9FAC !important; }
+
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\000037}}
+      .form-page .logo {
+        background: #f4f1e4 center center no-repeat;
+        background-size: contain;
+        height: 107px;
+        width: 192px;
+        margin: auto;
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 32px;
+        z-index: 10;
+        margin-top: -83px; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000320}}
+        @media (max-width: 800px) {
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000320}}
+          .form-page .logo {
+            height: 62px;   }
+}
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000324}}
+          .form-page .logo img {
+            display: block; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000329}}
+      .form-page .formwrapper {
+        margin: auto;
+        top: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 131px;
+        width: fit-content;
+        height: fit-content; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000338}}
+        @media (max-width: 700px) {
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000338}}
+          .form-page .formwrapper {
+            width: 96%;
+            height: fit-content;   }
+}
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000343}}
+          .form-page .formwrapper form {
+            width: 600px;
+            padding: 100px 0 50px;
+            border: 2px solid #000;
+            height: auto;
+            position: relative; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000349}}
+            @media (max-width: 700px) {
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000349}}
+              .form-page .formwrapper form {
+                width: 98%;
+                margin: auto;
+                padding: 70px 0 30px;
+                border: 2px solid #000;
+                height: fit-content;   }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000356}}
+                .form-page .formwrapper form #submit {
+                  bottom: -46px;
+                  margin: 0;   }
+}
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000363}}
+            .form-page .formwrapper form div.submitbutton {
+              padding: 20px;
+              background: #f5f1e5;
+              position: absolute;
+              left: 0;
+              right: 0;
+              width: fit-content;
+              margin: auto;
+              bottom: -45px; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000372}}
+              @media (max-width: 800px) {
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000372}}
+                .form-page .formwrapper form div.submitbutton {
+                  bottom: -45px;   }
+}
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000383}}
+            .form-page .formwrapper form .confirm, .form-page .formwrapper form .email,
+            .form-page .formwrapper form .name, .form-page .formwrapper form .password,
+            .form-page .formwrapper form .password2, .form-page .formwrapper form .website {
+              width: 70%;
+              margin: auto;
+              overflow: hidden;
+              margin-bottom: 30px; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000383}}
+              @media (max-width: 700px) {
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000383}}
+                .form-page .formwrapper form .confirm, .form-page .formwrapper form .email,
+                .form-page .formwrapper form .name, .form-page .formwrapper form .password,
+                .form-page .formwrapper form .password2, .form-page .formwrapper form .website {
+                  margin-bottom: 20px;
+                  font-size: 1em;   }
+}
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\0000394}}
+            .form-page .formwrapper form label {
+              display: block;
+              text-transform: uppercase;
+              width: 100%;
+              font-family: 'Futura-Medium';
+              margin-top: 10px;
+              color: black;
+              letter-spacing: 2px;
+              margin: 10px 0;
+              font-size: 12px; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003107}}
+        .form-page .formwrapper .errors {
+          list-style: none;
+          position: absolute;
+          left: -150px;
+          margin-top: -80px;
+          padding: 15px;
+          background: #ecccd2;
+          color: #692929;
+          font-size: 12px;
+          width: 200px;
+          text-align: center;
+          white-space: nowrap; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003120}}
+          .form-page .formwrapper .errors::before {
+            content: " ";
+            width: 0;
+            height: 0;
+            border-top: 24px solid transparent;
+            border-bottom: 24px solid transparent;
+            border-left: 20px solid #ecccd2;
+            position: absolute;
+            right: -18px;
+            margin-top: -15px; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003133}}
+        .form-page .formwrapper body {
+          font-family: 'Lato', sans-serif;
+          background: #e2dedb;
+          color: #e8e6e5; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003139}}
+          .form-page .formwrapper #form {
+            position: relative;
+            width: 500px;
+            margin: 50px auto 100px; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003145}}
+            .form-page .formwrapper input {
+              font-family: 'Futura-Light', sans-serif;
+              font-size: 1.4em;
+              width: 100%;
+              height: 40px;
+              font-weight: 100;
+              padding: 0;
+              background: transparent;
+              outline: none;
+              color: #000;
+              border: 0;
+              border-bottom: solid 1px black;
+              transition: all 0.3s ease-in-out;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -ms-transition: all 0.3s ease-in-out;
+              caret-color: #6E9FAC; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003162}}
+              @media (max-width: 600px) {
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003162}}
+                .form-page .formwrapper input {
+                  font-size: 1.3em;   }
+}
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003170}}
+                .form-page .formwrapper input:-moz-placeholder,
+                .form-page .formwrapper input:-ms-input-placeholder,
+                .form-page .formwrapper input::-moz-placeholder,
+                .form-page .formwrapper input::-webkit-input-placeholder,
+                .form-page .formwrapper input::placeholder {
+                  color: #dcd3ce;
+                  font-family: 'Futura-Light';
+                  font-weight: 100;
+                  opacity: 0.5; }
+                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003177}}
+                  .form-page .formwrapper input:focus {
+                    background: #e0eaed;
+                    border-bottom: 2px solid #6E9FAC; }
+                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003181}}
+                    .form-page .formwrapper input:focus label {
+                      color: #6E9FAC; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003187}}
+        .form-page .formwrapper #submit {
+          padding: 0 20px;
+          font-family: 'Futura', sans-serif;
+          color: #fff;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 1.2em;
+          margin: 0 auto;
+          background-color: black;
+          width: fit-content;
+          display: block;
+          transition: all 0.3s easeout;
+          border: 0;
+          height: 55px; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003203}}
+          .form-page .formwrapper #submit:hover {
+            color: #000;
+            background-color: #6E9FAC; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003210}}
+      .form-page .loginsignup {
+        margin: 50px auto 20px;
+        text-align: center;
+        color: #272727;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-family: 'Futura-Light';
+        font-size: 1.3em;
+        font-weight: 100; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003223}}
+        .form-page .loginsignup a {
+          font-weight: 500; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003228}}
+      .form-page .testlink {
+        margin: 100px auto 20px;
+        text-align: center;
+        color: #272727;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-family: 'Futura-Light'; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003240}}
+        .form-page ::-webkit-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003246}}
+          .form-page :-moz-placeholder {
+            opacity: 1;
+            -moz-transition: opacity 0.5s;
+            transition: opacity 0.5s; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003252}}
+            .form-page ::-moz-placeholder {
+              opacity: 1;
+              -moz-transition: opacity 0.5s;
+              transition: opacity 0.5s; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003258}}
+              .form-page :-ms-input-placeholder {
+                opacity: 1;
+                -ms-transition: opacity 0.5s;
+                transition: opacity 0.5s; }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003264}}
+                .form-page ::placeholder {
+                  opacity: 1;
+                  transition: opacity 0.5s; }
+                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003269}}
+                  .form-page *:focus::-webkit-input-placeholder {
+                    opacity: 0; }
+                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003273}}
+                    .form-page *:focus:-moz-placeholder {
+                      opacity: 0; }
+                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003277}}
+                      .form-page *:focus::-moz-placeholder {
+                        opacity: 0; }
+                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003281}}
+                        .form-page *:focus:-ms-input-placeholder {
+                          opacity: 0; }
+                          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003285}}
+                          .form-page *:focus::placeholder {
+                            opacity: 0; }
+                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/forms\.scss}line{font-family:\00003289}}
+                            .form-page .alert {
+                              color: #856404;
+                              background-color: #fff3cd;
+                              border-color: #ffeeba;
+                              margin-top: 80px;
+                              width: 70%;
+                              margin: 70px auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\000035}}
+nav {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  margin: auto 20px;
+  top: 0;
+  bottom: 0; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000313}}
+  nav ul {
+    width: 30px;
+    padding: 0; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000317}}
+    nav ul li {
+      height: 35px;
+      width: 35px;
+      display: block;
+      list-style: none;
+      margin-bottom: 40px;
+      text-indent: 1000px;
+      white-space: nowrap;
+      overflow: hidden;
+      background-size: cover;
+      transition: all 0.3s easeout; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000329}}
+      nav ul li a {
+        transition: all 0.3s easeout; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000333}}
+        nav ul li:hover {
+          opacity: 0.7; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000337}}
+          nav ul li a:hover {
+            opacity: 0.5;
+            cursor: pointer; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000344}}
+  nav .question {
+    background: url("../../img/question_icon.png");
+    background-size: cover; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000349}}
+    nav .discover {
+      background: url("../../img/discover_icon.png");
+      background-size: cover; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000354}}
+      nav .interact {
+        background: url("../../img/interact_icon.png");
+        background-size: cover; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/nav\.scss}line{font-family:\0000359}}
+        nav .help {
+          background: url("../../img/help.png");
+          background-size: cover; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\000038}}
+.onboardingarea {
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  margin-bottom: 150px; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000313}}
+  @media (max-width: 800px) {
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000313}}
+    .onboardingarea {
+      width: 100%;   }
+}
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000317}}
+    .onboardingarea .pedestal {
+      height: 100px;
+      width: 140px;
+      margin: auto;
+      border-bottom: 2px solid black;
+      cursor: grab; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000324}}
+      .onboardingarea .pedestal .shape {
+        color: #6E9FAC;
+        height: 70px;
+        width: 70px;
+        margin-bottom: 20px;
+        z-index: 10; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000331}}
+        .onboardingarea .pedestal .shape.business {
+          width: 0;
+          height: 0;
+          border-left: 70px solid transparent;
+          border-right: 0 solid transparent;
+          border-bottom: 70px solid #6E9FAC;
+          margin: auto; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000342}}
+  .onboardingarea .label-highlight {
+    color: white;
+    text-shadow: 0 0 12px #193390;
+    transition: all 0.4s easeout; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000348}}
+    .onboardingarea .label-selected {
+      color: #6E9FAC !important;
+      text-shadow: 0;
+      font-family: 'Futura-Bold'; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000354}}
+      .onboardingarea .hr-highlight {
+        border-color: white !important;
+        box-shadow: 0 0 12px #193390 !important;
+        transition: all 0.4s easeout; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000360}}
+        .onboardingarea .hr-selected {
+          border-color: #6E9FAC !important;
+          border-width: 2px !important;
+          text-shadow: 0; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000366}}
+          .onboardingarea .category {
+            font-size: 1em;
+            padding-top: 13px;
+            letter-spacing: 2px; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000372}}
+            .onboardingarea .question {
+              text-transform: uppercase;
+              font-family: 'Futura-Bold', sans-serif;
+              font-size: 1.4em;
+              letter-spacing: 2px;
+              margin-top: 200px; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000380}}
+              .onboardingarea .answers {
+                width: 100%;
+                position: relative; }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000384}}
+                .onboardingarea .answers ul {
+                  display: flex;
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+                  margin-top: 52px;
+                  padding: 0;
+                  font-family: 'Futura-Medium'; }
+                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000392}}
+                  .onboardingarea .answers ul li {
+                    width: 20%;
+                    list-style: none;
+                    display: block;
+                    margin: 20px;
+                    font-family: 'Futura-Medium';
+                    flex-grow: 4; }
+                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003100}}
+                    .onboardingarea .answers ul li .dropzone {
+                      margin: 0 auto 20px;
+                      width: 70px;
+                      height: 70px; }
+                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003106}}
+                      .onboardingarea .answers ul li hr {
+                        border-width: 1px;
+                        border-color: black;
+                        display: block;
+                        transition: all 0.4s easeout; }
+                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003113}}
+                        .onboardingarea .answers ul li .label {
+                          width: 100%;
+                          text-align: center;
+                          transition: all 0.4s easeout; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003123}}
+.tooltip {
+  background: #6E9FAC !important;
+  border-color: #6E9FAC !important; }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003128}}
+  .tooltip-arrow {
+    margin-top: 0 !important;
+    position: absolute;
+    border-top-color: #6E9FAC !important;
+    border-bottom-color: #6E9FAC !important;
+    border-left-color: #6E9FAC !important;
+    border-right-color: #6E9FAC !important; }
+
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003137}}
+    .tooltip-arrow.bottom {
+      background: #6E9FAC !important;
+      border-color: #6E9FAC !important;
+      margin-top: 15px !important; }
+
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003143}}
+      .tooltip.bottom .tooltip-arrow {
+        background: #6E9FAC !important;
+        border-color: #6E9FAC !important;
+        border-bottom: 5px solid #6E9FAC !important; }
+
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003149}}
+        .tooltip-inner {
+          background: #6E9FAC !important;
+          color: white !important;
+          border-radius: 0 !important; }
+
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003155}}
+          .nextquestion {
+            width: 60px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            transition: all 0.3s easeout; }
+
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003164}}
+            .nextquestion-active {
+              opacity: 1;
+              cursor: pointer; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003169}}
+              .nextquestion-active:hover .nextarrow:before {
+                margin-top: 20px; }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003173}}
+                .nextquestion-active:hover .nextarrow:after {
+                  margin-top: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003179}}
+.nexttext {
+  font-family: 'Futura-bold';
+  letter-spacing: 5px; }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003184}}
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background-color: #ecf0f1; }
+
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003195}}
+    p {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 2em;
+      color: #7f8c8d; }
+
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003202}}
+      footer {
+        display: none !important; }
+
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/roadmap\.scss}line{font-family:\000038}}
+        .questionaire-template .shape {
+          background: url('../img/Diamond_blkoutline.png');
+          background-size: cover;
+          height: 100px;
+          weight: 100px;
+          margin: 20px auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000313}}
+@font-face {
+  font-family: 'Futura-Light';
+  src: url('../static/fonts/FuturaLTPro-Light.otf'); }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000318}}
+  @font-face {
+    font-family: 'Futura-Book';
+    src: url('../static/fonts/FuturaLTPro-Book.otf'); }
+
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000323}}
+    @font-face {
+      font-family: 'Futura-Bold';
+      src: url('../static/fonts/FuturaLTPro-Bold.otf'); }
+
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000328}}
+      @font-face {
+        font-family: 'Futura-Medium';
+        src: url('../static/fonts/FuturaLTPro-Medium.otf'); }
+
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000333}}
+        html {
+          background-color: #f4f1e4;
+          height: 100%; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000337}}
+          html body {
+            background-color: #f4f1e4;
+            font-family: 'Futura-Light', sans-serif; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000342}}
+            html p, html a, html span {
+              font-family: 'Futura-Light', sans-serif; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000346}}
+              html h1 {
+                font-family: 'Futura-Bold', sans-serif;
+                text-transform: uppercase;
+                display: none; }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000352}}
+                html a {
+                  transition: all 0.3s easeout;
+                  color: #6E9FAC; }
+                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000356}}
+                  html a:hover {
+                    cursor: pointer;
+                    color: #6E9FAC; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000362}}
+          html input[type='submit'] {
+            transition: all 0.3s easeout; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/main\.scss}line{font-family:\0000365}}
+            html input[type='submit']:hover {
+              cursor: pointer;
+              background-color: #6E9FAC; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\000033}}
+.onboardingarea {
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  margin-bottom: 150px; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\000038}}
+  @media (max-width: 800px) {
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\000038}}
+    .onboardingarea {
+      width: 100%;   }
+}
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000312}}
+    .onboardingarea .pedestal {
+      height: 100px;
+      width: 140px;
+      margin: auto;
+      border-bottom: 2px solid black;
+      cursor: grab; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000319}}
+      .onboardingarea .pedestal .shape {
+        color: #6E9FAC;
+        height: 70px;
+        width: 70px;
+        margin-bottom: 20px;
+        z-index: 10; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000326}}
+        .onboardingarea .pedestal .shape.business {
+          width: 0;
+          height: 0;
+          border-left: 70px solid transparent;
+          border-right: 0 solid transparent;
+          border-bottom: 70px solid #6E9FAC;
+          margin: auto; }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000337}}
+  .onboardingarea .label-highlight {
+    color: white;
+    text-shadow: 0 0 12px #193390;
+    transition: all 0.4s easeout; }
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000343}}
+    .onboardingarea .label-selected {
+      color: #6E9FAC !important;
+      text-shadow: 0;
+      font-family: 'Futura-Bold'; }
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000349}}
+      .onboardingarea .hr-highlight {
+        border-color: white !important;
+        box-shadow: 0 0 12px #193390 !important;
+        transition: all 0.4s easeout; }
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000355}}
+        .onboardingarea .hr-selected {
+          border-color: #6E9FAC !important;
+          border-width: 2px !important;
+          text-shadow: 0; }
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000361}}
+          .onboardingarea .category {
+            font-size: 1em;
+            padding-top: 13px;
+            letter-spacing: 2px; }
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000367}}
+            .onboardingarea .question {
+              text-transform: uppercase;
+              font-family: 'Futura-Bold', sans-serif;
+              font-size: 1.4em;
+              letter-spacing: 2px;
+              margin-top: 200px; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000375}}
+              .onboardingarea .answers {
+                width: 100%;
+                position: relative; }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000379}}
+                .onboardingarea .answers ul {
+                  display: flex;
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+                  margin-top: 52px;
+                  padding: 0;
+                  font-family: 'Futura-Medium'; }
+                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000387}}
+                  .onboardingarea .answers ul li {
+                    width: 20%;
+                    list-style: none;
+                    display: block;
+                    margin: 20px;
+                    font-family: 'Futura-Medium';
+                    flex-grow: 5; }
+                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\0000395}}
+                    .onboardingarea .answers ul li .dropzone {
+                      margin: 0 auto 20px;
+                      width: 70px;
+                      height: 70px; }
+                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003101}}
+                      .onboardingarea .answers ul li hr {
+                        border-width: 1px;
+                        border-color: black;
+                        display: block;
+                        transition: all 0.4s easeout; }
+                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003108}}
+                        .onboardingarea .answers ul li .label {
+                          width: 100%;
+                          text-align: center;
+                          transition: all 0.4s easeout; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003118}}
+.tooltip {
+  background: #6E9FAC !important;
+  border-color: #6E9FAC !important; }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003123}}
+  .tooltip-arrow {
+    margin-top: 0 !important;
+    position: absolute;
+    border-top-color: #6E9FAC !important;
+    border-bottom-color: #6E9FAC !important;
+    border-left-color: #6E9FAC !important;
+    border-right-color: #6E9FAC !important; }
+
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003132}}
+    .tooltip-arrow.bottom {
+      background: #6E9FAC !important;
+      border-color: #6E9FAC !important;
+      margin-top: 15px !important; }
+
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003138}}
+      .tooltip.bottom .tooltip-arrow {
+        background: #6E9FAC !important;
+        border-color: #6E9FAC !important;
+        border-bottom: 5px solid #6E9FAC !important; }
+
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003144}}
+        .tooltip-inner {
+          background: #6E9FAC !important;
+          color: white !important;
+          border-radius: 0 !important; }
+
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003150}}
+          .nextquestion {
+            width: 60px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            transition: all 0.3s easeout; }
+
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003159}}
+            .nextquestion-active {
+              opacity: 1;
+              cursor: pointer; }
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003164}}
+              .nextquestion-active:hover .nextarrow:before {
+                margin-top: 20px; }
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003168}}
+                .nextquestion-active:hover .nextarrow:after {
+                  margin-top: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003174}}
+.nexttext {
+  font-family: 'Futura-bold';
+  letter-spacing: 5px; }
+
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003179}}
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background-color: #ecf0f1; }
+
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003190}}
+    p {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 2em;
+      color: #7f8c8d; }
+
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/toddbirchard\/Dropbox\/Sites\/_Professional\/framewrk-heroku\/static\/scss\/components\/onboarding\.scss}line{font-family:\00003197}}
+      footer {
+        display: none !important; }

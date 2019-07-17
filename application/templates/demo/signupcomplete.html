@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+<link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="layout">
+
+  <section class="left">
+    <a href="{{ url_for('demo_bp.demo') }}">
+      <img src="{{ url_for('static', filename='img/logo/logo.png') }}" id="Logo">
+    </a>
+    <span class="tagline">Questions are the answer</span>
+    <div class="divider"></div>
+    <div class="quote">
+      <p>"If your thoughts, feeling and actions are not in harmony of what you desire, you won't materialize it."</p>
+      <p>- Hina Hashmi -</p>
+    </div>
+  </section>
+
+  <section class="right">
+    <div class="form-group">
+      <h1>Sign Up Complete!</h1>
+      <p class="success-message">You're all signed up for Framewrk!</p>
+      <p class="success-message">Let's get you set up. Next is a quick onboarding so we can learn more about your business needs.</p>
+      <button class="start-onboarding">Start Onboarding</button>
+    </div>
+  </section>
+
+</div>
+{% endblock %}

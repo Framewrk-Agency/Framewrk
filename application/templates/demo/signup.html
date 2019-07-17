@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+<link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="layout">
+
+  <section class="left">
+    <a href="{{ url_for('demo_bp.demo') }}">
+      <img src="{{ url_for('static', filename='img/logo/logo.png') }}" id="Logo">
+    </a>
+    <span class="tagline">Questions are the answer</span>
+    <div class="divider"></div>
+    <div class="quote">
+      <p>"If your thoughts, feeling and actions are not in harmony of what you desire, you won't materialize it."</p>
+      <p>- Hina Hashmi -</p>
+    </div>
+  </section>
+
+  <section class="right">
+    <div class="form-group">
+      <h1>Sign up</h1>
+      <span class="subheadline">Create your account</span>
+      <form>
+        <div class="field-group">
+          <img class="icon" src="{{ url_for('static', filename='img/demo/icons/profile.svg') }}">
+          <input class="name" type="text" name="fname" placeholder="Name"></input>
+        </div>
+
+        <div class="field-group">
+          <img class="icon" src="{{ url_for('static', filename='img/demo/icons/email.svg') }}">
+          <input class="password" type="text" name="fname" placeholder="Email address"></input>
+        </div>
+
+        <div class="field-group">
+          <img class="icon" src="{{ url_for('static', filename='img/demo/icons/password.svg') }}">
+          <input class="password" type="text" name="fname" placeholder="Create password"></input>
+        </div>
+        <p class="plan-text">Please choose your subscription plan.</p>
+        <label class="checkbox-container" for="standard-radio">
+          Free Plan
+          <input type="radio" checked="checked" name="free" value="free">
+          <span class="checkmark"></span>
+        </label>
+        <ul class="plan-bullets">
+          <li>Unlimited Q+A</li>
+          <li>Select Support Resources</li>
+        </ul>
+        <label class="checkbox-container" for="standard-radio">
+          Standard Plan
+          <input type="radio" name="standard" value="standard">
+          <span class="checkmark"></span>
+        </label>
+        <ul class="plan-bullets">
+          <li>Unlimited Q+A</li>
+          <li>Select Support Resources</li>
+          <li>Customized Business Roadmap</li>
+        </ul>
+        <button class="signup-button">Sign up</button>
+      </form>
+    </div>
+    <div class="bottom">
+      <span class="signup">Already have an account? <a href="signup">LOG IN</a></span>
+    </div>
+  </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+@import "variables";
+@import "fonts";
+
+.demo-template {
+  background: #F7F4E7;
+  padding: 50px;
+  margin: auto;
+  max-width: 1000px;
+  font-family: 'Futura-Medium', sans-serif;
+  @media(max-width: 600px) {
+    padding: 40px;
+  }
+
+  .container {
+    padding: 0;
+
+    h1 {
+      @media(max-width: 600px) {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+    }
+  }
+
+  ul {
+    padding-left: 30px;
+    li {
+      color: #414548;
+
+      a {
+        color: #414548;
+      }
+    }
+  }
+}

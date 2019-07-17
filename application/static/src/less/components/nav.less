@@ -1,0 +1,59 @@
+nav {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  margin: auto 20px;
+  top: 0;
+  bottom: 0;
+
+  ul {
+    width: 30px;
+    padding: 0;
+
+    li {
+      height: 35px;
+      width: 35px;
+      display: block;
+      list-style: none;
+      margin-bottom: 40px;
+      text-indent: 1000px;
+      white-space: nowrap;
+      overflow: hidden;
+      background-size: cover;
+      transition: all .3s easeout;
+
+      a {
+        transition: all .3s easeout;
+      }
+
+      &:hover {
+        opacity: .7;
+      }
+
+      a:hover {
+          opacity:.5;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .question {
+      background: url("../../img/question_icon.png");
+      background-size: cover;
+    }
+
+    .discover {
+      background: url("../../img/discover_icon.png");
+      background-size: cover;
+    }
+
+    .interact {
+      background: url("../../img/interact_icon.png");
+      background-size: cover;
+    }
+
+    .help {
+      background: url("../../img/help.png");
+      background-size: cover;
+    }
+  }

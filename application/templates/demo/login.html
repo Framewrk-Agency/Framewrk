@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+<link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="layout">
+
+  <section class="left">
+    <a href="{{ url_for('demo_bp.demo') }}">
+      <img src="{{ url_for('static', filename='img/logo/logo.png') }}" id="Logo">
+    </a>
+    <span class="tagline">Questions are the answer</span>
+    <div class="divider"></div>
+    <div class="quote">
+      <p>"If your thoughts, feeling and actions are not in harmony of what you desire, you won't materialize it."</p>
+      <p>- Hina Hashmi -</p>
+    </div>
+  </section>
+
+  <section class="right">
+    <div class="form-group">
+      <h1>Login</h1>
+      <form>
+        <div class="field-group">
+          <img class="icon" src="{{ url_for('static', filename='img/demo/icons/email.svg') }}">
+          <input class="email" type="text" name="fname" placeholder="Email Address"></input>
+        </div>
+
+        <div class="field-group">
+          <img class="icon" src="{{ url_for('static', filename='img/demo/icons/password.svg') }}">
+          <input class="password" type="text" name="fname" placeholder="Password"></input>
+        </div>
+        <a href="" class="forgot-password">Forgot Password?</a>
+        <button class="login-button">Login</button>
+      </form>
+    </div>
+    <div class="bottom">
+      <span class="signup">Don’t have an account? <a href="signup">SIGN UP</a></span>
+    </div>
+  </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,950 @@
+@font-face {
+  font-family: 'Futura-Light';
+  src: url("https://framewrk.nyc3.digitaloceanspaces.com/fonts/FuturaLTPro-Light.otf");
+}
+@font-face {
+  font-family: 'Futura-Book';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Book.otf");
+}
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Bold.otf");
+}
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Medium.otf");
+}
+.demo-template {
+  background: #F7F4E7;
+  padding: 50px;
+  margin: auto;
+  max-width: 1000px;
+  font-family: 'Futura-Medium', sans-serif;
+}
+@media (max-width: 600px) {
+  .demo-template {
+    padding: 40px;
+  }
+}
+.demo-template .container {
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .demo-template .container h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+.demo-template ul {
+  padding-left: 30px;
+}
+.demo-template ul li {
+  color: #414548;
+}
+.demo-template ul li a {
+  color: #414548;
+}
+
+@font-face {
+  font-family: 'Futura-Light';
+  src: url("https://framewrk.nyc3.digitaloceanspaces.com/fonts/FuturaLTPro-Light.otf");
+}
+@font-face {
+  font-family: 'Futura-Book';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Book.otf");
+}
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Bold.otf");
+}
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Futura-Light';
+  src: url("https://framewrk.nyc3.digitaloceanspaces.com/fonts/FuturaLTPro-Light.otf");
+}
+@font-face {
+  font-family: 'Futura-Book';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Book.otf");
+}
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Bold.otf");
+}
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Medium.otf");
+}
+html {
+  height: 100%;
+}
+.login-template {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Futura-Medium', sans-serif;
+}
+.login-template .container,
+.login-template body {
+  max-width: none !important;
+  height: 100%;
+  padding: 0;
+}
+.login-template .layout {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.login-template button,
+.login-template input {
+  outline: none;
+}
+.login-template button:focus,
+.login-template input:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+.login-template section {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 120px 100px;
+}
+@media (max-width: 800px) {
+  .login-template section {
+    padding: 100px 50px;
+  }
+}
+.login-template section.left {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+@media (max-width: 800px) {
+  .login-template section.left {
+    display: none;
+  }
+}
+.login-template section.left::after {
+  background-image: url("../../img/demo/login-bg.png");
+  background-size: cover;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.login-template section.left #Logo {
+  margin: auto auto 10px;
+  width: 220px;
+  position: relative;
+  display: block;
+  top: 0;
+  transition: all 0.2s ease-out;
+}
+.login-template section.left #Logo:hover {
+  opacity: 0.5;
+}
+.login-template section.left .tagline {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Futura-Medium';
+  white-space: nowrap;
+}
+.login-template section.left .divider {
+  height: 50%;
+  width: 3px;
+  background: white;
+  margin: 100px auto;
+  opacity: 0.2;
+}
+.login-template section.left .quote {
+  width: 280px;
+  line-height: 1.3;
+  color: white;
+  font-family: 'Futura-Medium';
+  text-align: left;
+  margin: auto;
+  font-size: 1.1em;
+  text-shadow: 0 0 2px black;
+}
+.login-template section.right {
+  background: white;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .login-template section.right {
+    width: 100%;
+  }
+}
+.login-template section.right .form-group {
+  margin: 0 auto auto;
+  max-width: 400px;
+}
+.login-template section.right .form-group h1 {
+  font-family: 'Futura-Medium';
+  text-align: left;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
+}
+.login-template section.right .form-group h1::before {
+  content: "";
+  display: block;
+  background: #4FBA9A;
+  height: 12px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  margin-top: 16px;
+}
+@media (max-width: 800px) {
+  .login-template section.right .form-group h1::before {
+    width: 40px;
+  }
+}
+.login-template section.right .form-group a {
+  color: #9B9B9B;
+}
+.login-template section.right .form-group form {
+  text-align: right;
+}
+.login-template section.right .form-group form .field-group {
+  display: flex;
+  justify-content: space-between;
+}
+.login-template section.right .form-group form .field-group .icon {
+  height: 50px;
+}
+.login-template section.right .form-group form .field-group input[type='text'] {
+  display: block;
+  background: #e6e6e6;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0 0 10px 10px;
+  padding: 14px;
+  width: 100%;
+  font-size: 0.9em;
+  transition: all 0.2s ease-out;
+}
+.login-template section.right .form-group form .field-group input[type='text']:hover {
+  background: #f4f4f4;
+}
+.login-template section.right .form-group form .field-group input[type='text']:focus {
+  border: 2px inset black;
+  border-style: inset;
+}
+.login-template section.right .form-group form .forgot-password {
+  display: block;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 0.8em;
+  margin: 30px 0;
+  transition: opacity 0.2s ease-out;
+}
+.login-template section.right .form-group form .forgot-password:hover {
+  opacity: 0.7;
+}
+.login-template section.right .form-group form .login-button {
+  display: block;
+  -webkit-appearance: none;
+  background: #4FBA9A;
+  color: white;
+  transition: all 0.2s ease-out;
+  border: 0;
+  padding: 10px 15px;
+  width: 150px;
+  float: right;
+  box-shadow: 0 0 0 #dadfec;
+}
+.login-template section.right .form-group form .login-button:hover {
+  background: white;
+  color: #4FBA9A;
+  cursor: pointer;
+  box-shadow: 0 0 4px #dadfec;
+}
+.login-template section.right .bottom {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #efefef;
+  clip-path: polygon(0 63%, 100% 81%, 100% 100%, 0% 100%);
+}
+.login-template section.right .bottom .signup {
+  color: #9B9B9B;
+  z-index: 1;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 600px) {
+  .login-template section.right .bottom .signup {
+    bottom: 30px;
+  }
+}
+.login-template section.right .bottom .signup a {
+  color: #4FBA9A;
+}
+
+nav {
+  background: #F7F4E7;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+nav .wrapper {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+nav .wrapper .menu {
+  display: flex;
+  justify-content: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  nav .wrapper .menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+nav .wrapper .menu li {
+  color: #212529;
+  list-style: none;
+  margin-right: 50px;
+  font-size: 1.2em;
+  line-height: 1;
+}
+@media (max-width: 800px) {
+  nav .wrapper .menu li {
+    margin-right: 0;
+  }
+}
+nav .wrapper .menu li a {
+  color: #212529;
+}
+nav .wrapper .menu li:hover {
+  cursor: pointer;
+}
+nav .wrapper .menu li.active {
+  background: #4FBA9A;
+}
+nav .wrapper .tagline {
+  text-transform: uppercase;
+  color: #9B9B9B;
+  line-height: 1;
+}
+@media (max-width: 800px) {
+  nav .wrapper .tagline {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: 'Futura-Light';
+  src: url("https://framewrk.nyc3.digitaloceanspaces.com/fonts/FuturaLTPro-Light.otf");
+}
+@font-face {
+  font-family: 'Futura-Book';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Book.otf");
+}
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Bold.otf");
+}
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Medium.otf");
+}
+#BackgroundVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+}
+#Logo {
+  vertical-align: middle;
+  border-style: none;
+  z-index: 1;
+  position: absolute;
+  width: 150px;
+  top: 40px;
+  transition: all 0.2s ease-out;
+}
+@media (max-width: 600px) {
+  #Logo {
+    right: 0;
+    margin: auto;
+    left: 0;
+  }
+}
+#Logo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.question-template,
+.question-freeform {
+  font-family: 'Futura-Medium', sans-serif;
+  font-size: 14px;
+  background: black;
+}
+.question-template button,
+.question-freeform button {
+  outline: none;
+}
+.question-template button:focus,
+.question-freeform button:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+.question-template .container,
+.question-freeform .container {
+  max-width: 1200px;
+}
+.question-template .container .layout,
+.question-freeform .container .layout {
+  height: 100%;
+  width: 95%;
+  max-width: unset !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 250px;
+}
+@media (max-width: 600px) {
+  .question-template .container .layout,
+  .question-freeform .container .layout {
+    max-height: 60%;
+    height: unset;
+  }
+}
+.question-template .container .layout .grid,
+.question-freeform .container .layout .grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 1;
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .question-template .container .layout .grid,
+  .question-freeform .container .layout .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.question-template .container .layout .grid .question .question-background,
+.question-freeform .container .layout .grid .question .question-background {
+  background: #F7F4E7;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px #929292;
+  position: relative;
+}
+.question-template .container .layout .grid .question .question-background h1,
+.question-freeform .container .layout .grid .question .question-background h1 {
+  font-family: 'Futura-Medium', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.question-template .container .layout .grid .question .question-background i,
+.question-freeform .container .layout .grid .question .question-background i {
+  color: #4A4A4A;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.question-template .container .layout .grid .question .question-background i:hover,
+.question-freeform .container .layout .grid .question .question-background i:hover {
+  cursor: help;
+}
+.question-template .container .layout .grid .question .question-background .question-copy,
+.question-freeform .container .layout .grid .question .question-background .question-copy {
+  margin: 0;
+}
+.question-template .container .layout .grid .question .buttons,
+.question-freeform .container .layout .grid .question .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.question-template .container .layout .grid .question .buttons button,
+.question-freeform .container .layout .grid .question .buttons button {
+  -webkit-appearance: none;
+  background: #f8f3e7;
+  border: 0;
+  padding: 15px;
+  width: 48%;
+  font-family: 'Futura-Medium';
+  transition: all 0.2s ease-out;
+  box-shadow: 0 0 3px #929292;
+}
+.question-template .container .layout .grid .question .buttons button.answer-button,
+.question-freeform .container .layout .grid .question .buttons button.answer-button {
+  color: white;
+  background: #4A4A4A;
+  box-shadow: 0 0 3px #353535;
+}
+.question-template .container .layout .grid .question .buttons button:hover,
+.question-freeform .container .layout .grid .question .buttons button:hover {
+  cursor: pointer;
+  background: white;
+  color: #4FBA9A;
+}
+.question-template .container .layout .grid .answer,
+.question-freeform .container .layout .grid .answer {
+  opacity: 0;
+  margin-top: 20px;
+  transition: all 0.4s ease-out;
+}
+.question-template .container .layout .grid .answer.active,
+.question-freeform .container .layout .grid .answer.active {
+  opacity: 1;
+  margin-top: 0;
+}
+.question-template .container .layout .grid .answer .answer-background,
+.question-freeform .container .layout .grid .answer .answer-background {
+  background: #f8f3e7;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px #929292;
+}
+@media (max-width: 600px) {
+  .question-template .container .layout .grid .answer .answer-background,
+  .question-freeform .container .layout .grid .answer .answer-background {
+    margin-bottom: 10px;
+  }
+}
+.question-template .container .layout .grid .answer .answer-background .freeform-answer,
+.question-freeform .container .layout .grid .answer .answer-background .freeform-answer {
+  padding: 10px;
+}
+.question-template .container .layout .grid .answer .answer-background .answer-container,
+.question-freeform .container .layout .grid .answer .answer-background .answer-container {
+  width: 48%;
+  margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+.question-template .container .layout .grid .answer .answer-background .answer-container .answer-tooltip,
+.question-freeform .container .layout .grid .answer .answer-background .answer-container .answer-tooltip {
+  color: white;
+  background: #4A4A4A;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  left: -130px;
+  top: -10px;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.2s ease-out;
+  display: none;
+  opacity: 0;
+}
+.question-template .container .layout .grid .answer .answer-background .answer-container .answer-option,
+.question-freeform .container .layout .grid .answer .answer-background .answer-container .answer-option {
+  -webkit-appearance: none;
+  background: #e6e6e6;
+  border: 0;
+  padding: 10px;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.question-template .container .layout .grid .answer .answer-background .answer-container .answer-option:hover,
+.question-freeform .container .layout .grid .answer .answer-background .answer-container .answer-option:hover {
+  cursor: pointer;
+  background: white;
+  color: #4FBA9A;
+}
+.question-template .container .layout .grid .answer .answer-background .answer-container .answer-option:focus,
+.question-freeform .container .layout .grid .answer .answer-background .answer-container .answer-option:focus {
+  border: 2px solid black;
+  border-style: inset;
+}
+.question-template .container .layout .grid .answer .submit,
+.question-freeform .container .layout .grid .answer .submit {
+  -webkit-appearance: none;
+  background: #4FBA9A;
+  color: white;
+  transition: all 0.2s ease-out;
+  border: 0;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 0 3px #929292;
+}
+.question-template .container .layout .grid .answer .submit:hover,
+.question-freeform .container .layout .grid .answer .submit:hover {
+  cursor: pointer;
+  background: white;
+  color: #4FBA9A;
+}
+.question-template .container .layout .grid .explanation,
+.question-freeform .container .layout .grid .explanation {
+  background: #4A4A4A;
+  color: white;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 0 0 3px #353535;
+}
+.question-template .container .layout .grid .explanation .answer-response,
+.question-freeform .container .layout .grid .explanation .answer-response {
+  display: none;
+}
+.question-template .container .layout .grid .explanation p,
+.question-freeform .container .layout .grid .explanation p {
+  margin-bottom: 0;
+}
+.question-template .tooltipActive,
+.question-freeform .tooltipActive {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+@font-face {
+  font-family: 'Futura-Light';
+  src: url("https://framewrk.nyc3.digitaloceanspaces.com/fonts/FuturaLTPro-Light.otf");
+}
+@font-face {
+  font-family: 'Futura-Book';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Book.otf");
+}
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Bold.otf");
+}
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("https://framewrk.nyc3.cdn.digitaloceanspaces.com/fonts/FuturaLTPro-Medium.otf");
+}
+html {
+  height: 100%;
+}
+.signup-template {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Futura-Medium', sans-serif;
+}
+.signup-template .container,
+.signup-template body {
+  max-width: none !important;
+  height: 100%;
+  padding: 0;
+}
+.signup-template .layout {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.signup-template button,
+.signup-template input {
+  outline: none;
+}
+.signup-template button:focus,
+.signup-template input:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+.signup-template section {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 120px 100px;
+}
+@media (max-width: 800px) {
+  .signup-template section {
+    padding: 100px 50px;
+  }
+}
+.signup-template section.left {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+@media (max-width: 800px) {
+  .signup-template section.left {
+    display: none;
+  }
+}
+.signup-template section.left::after {
+  background-image: url("../../img/demo/login-bg.png");
+  background-size: cover;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.signup-template section.left #Logo {
+  margin: auto auto 10px;
+  width: 220px;
+  position: relative;
+  display: block;
+  top: 0;
+  transition: all 0.2s ease-out;
+}
+.signup-template section.left #Logo:hover {
+  opacity: 0.5;
+}
+.signup-template section.left .tagline {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Futura-Medium';
+  white-space: nowrap;
+}
+.signup-template section.left .divider {
+  height: 50%;
+  width: 3px;
+  background: white;
+  margin: 100px auto;
+  opacity: 0.2;
+}
+.signup-template section.left .quote {
+  width: 280px;
+  line-height: 1.3;
+  color: white;
+  font-family: 'Futura-Medium';
+  text-align: left;
+  margin: auto;
+  font-size: 1.1em;
+  text-shadow: 0 0 2px black;
+}
+.signup-template section.right {
+  background: white;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .signup-template section.right {
+    width: 100%;
+  }
+}
+.signup-template section.right .form-group {
+  margin: 0 auto auto;
+  max-width: 400px;
+}
+.signup-template section.right .form-group h1 {
+  font-family: 'Futura-Medium';
+  text-align: left;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.signup-template section.right .form-group h1::before {
+  content: "";
+  display: block;
+  background: #4FBA9A;
+  height: 12px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  margin-top: 16px;
+}
+@media (max-width: 800px) {
+  .signup-template section.right .form-group h1::before {
+    width: 40px;
+  }
+}
+.signup-template section.right .form-group .subheadline,
+.signup-template section.right .form-group .success-message {
+  text-align: left;
+  width: 100%;
+  color: #ababab;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.signup-template section.right .form-group a {
+  color: #9B9B9B;
+}
+.signup-template section.right .form-group form {
+  text-align: right;
+  margin-top: 80px;
+}
+.signup-template section.right .form-group form .field-group {
+  display: flex;
+  justify-content: space-between;
+}
+.signup-template section.right .form-group form .field-group .icon {
+  height: 50px;
+  width: 58px;
+}
+.signup-template section.right .form-group form .field-group input[type='text'] {
+  display: block;
+  background: #e6e6e6;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0 0 10px 10px;
+  padding: 14px;
+  width: 100%;
+  font-size: 0.9em;
+  transition: all 0.2s ease-out;
+}
+.signup-template section.right .form-group form .field-group input[type='text']:hover {
+  background: #f4f4f4;
+}
+.signup-template section.right .form-group form .field-group input[type='text']:focus {
+  border: 2px solid black;
+  border-style: inset;
+}
+.signup-template section.right .form-group form .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+}
+.signup-template section.right .form-group form .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.signup-template section.right .form-group form .checkbox-container input:checked ~ .checkmark {
+  background-color: #4FBA9A;
+}
+.signup-template section.right .form-group form .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.signup-template section.right .form-group form .checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.signup-template section.right .form-group form .checkbox-container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.signup-template section.right .form-group form .checkbox-container .checkmark::after:hover {
+  background-color: #ccc;
+}
+.signup-template section.right .form-group form .checkbox-container .plan-name {
+  color: black;
+}
+.signup-template section.right .form-group form .plan-text {
+  text-align: left;
+  width: 100%;
+  color: #ababab;
+  margin-top: 30px;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.signup-template section.right .form-group form .plan-bullets {
+  color: #ababab;
+  font-size: 0.8em;
+  padding-left: 15px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.signup-template section.right .form-group form .signup-button {
+  display: block;
+  -webkit-appearance: none;
+  background: #4FBA9A;
+  color: white;
+  transition: all 0.2s ease-out;
+  border: 0;
+  padding: 10px 15px;
+  width: 150px;
+  float: right;
+}
+.signup-template section.right .form-group form .signup-button:hover {
+  background: white;
+  color: #4FBA9A;
+  cursor: pointer;
+}
+.signup-template section.right .start-onboarding {
+  display: block;
+  -webkit-appearance: none;
+  background: #4FBA9A;
+  color: white;
+  transition: all 0.2s ease-out;
+  border: 0;
+  padding: 10px 15px;
+  width: 100%;
+  float: right;
+  margin-top: 30px;
+  box-shadow: 0 0 0 #dadfec;
+}
+.signup-template section.right .start-onboarding:hover {
+  background: white;
+  color: #4FBA9A;
+  cursor: pointer;
+  box-shadow: 0 0 4px #dadfec;
+}
+.signup-template section.right .bottom {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #efefef;
+  clip-path: polygon(0 63%, 100% 81%, 100% 100%, 0% 100%);
+}
+@media (max-width: 600px) {
+  .signup-template section.right .bottom {
+    position: fixed;
+    height: 200px;
+    clip-path: polygon(0 63%, 100% 80%, 100% 100%, 0% 100%);
+  }
+}
+.signup-template section.right .bottom .signup {
+  color: #9B9B9B;
+  z-index: 1;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 600px) {
+  .signup-template section.right .bottom .signup {
+    bottom: 15px;
+  }
+}
+.signup-template section.right .bottom .signup a {
+  color: #4FBA9A;
+}
+

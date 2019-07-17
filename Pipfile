@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Gunicorn = "*"
+Flask = "*"
+Requests = "*"
+WTForms = "*"
+Flask-Assets = "*"
+Flask-Login = "*"
+Flask-Session = "*"
+Flask-SQLAlchemy = "*"
+Psycopg2-binary = "*"
+Redis = "*"
+
+[dev-packages]
+Python-Dotenv = "*"
+Lesscpy = "*"
+CSSMin = "*"
+JSMin = "*"
+
+[requires]
+python_version = "3.7"

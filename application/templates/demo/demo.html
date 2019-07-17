@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+  <link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <h1>Framewrk Demo Screens</h1>
+  <ul>
+    <li><a href="/question/1/">Questions page</a></li>
+    <li><a href="{{ url_for('demo_bp.login') }}">Login page</a></li>
+    <li><a href="{{ url_for('demo_bp.signup') }}">Signup page</a></li>
+    <li><a href="{{ url_for('demo_bp.signup_complete') }}">Signup complete page</a></li>
+  </ul>
+{% endblock %}
