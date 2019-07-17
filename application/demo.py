@@ -2,7 +2,6 @@
 from flask import url_for, render_template
 from flask import current_app as app
 from flask import Blueprint, request
-from random import randint
 from .models import Question
 
 demo_bp = Blueprint('demo_bp', __name__)
@@ -44,8 +43,6 @@ def question(num):
         answers = [answer.value for answer in questionGroup if '_text' in answer.variable]
         responses = [response.value for response in questionGroup if '_response' in response.variable]
         tooltips = [response.value for response in questionGroup if '_hover' in response.variable]
-        print(len(answers))
-        variables = [objClass.variable for objClass in questionGroup]
         questionType = questionGroup[0].question_type
         if questionType == 'Multiple Choice':
             return render_template('/demo/question-multiplechoice.html',
@@ -55,7 +52,7 @@ def question(num):
                                    tooltips=tooltips,
                                    # variables=variables,
                                    explanation=questionGroup[0].info,
-                                   template="question-template")
+                                   template="question-multiplechoice")
         return render_template('/demo/question-freeform.html',
                                question=questionGroup[0].question,
                                choices=answers,
