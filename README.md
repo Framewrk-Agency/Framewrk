@@ -1,6 +1,6 @@
 # Framewrk
 
-Framewrk is a platform to coach and provide a network for aspiring engineers.
+Framewrk is a subscription service that entrepreneurs access online that serves up targeted feedback on their business to help them grow.
 
 ![Python](https://img.shields.io/badge/Python-3.7-blue.svg?longCache=true&style=flat-square&logo=python&logoColor=white&colorA=4c566a&colorB=5e81ac)
 ![Flask](https://img.shields.io/badge/Flask-1.0.2-blue.svg?longCache=true&style=flat-square&logo=flask&colorA=4c566a&colorB=5e81ac)
@@ -24,6 +24,7 @@ Framewrk is a platform to coach and provide a network for aspiring engineers.
 * */static* contains all source and production compressed frontend (JS, CSS, etc).
 * */templates* contains all "pages" of our app, which are templates which dynamically build themselves at runtime.
 * *config.py* holds all basic configuration information.
+* */demo* is a standalone app pertaining to the demo assembled in 2019.
 * Files like *Pipfile*, *Pipefile.lock*, and *requirements.txt* are all related to our Python environment.
 
 ### Backend
@@ -49,9 +50,9 @@ Framewrk is a web application build using Flask, a micro framework of Python. Th
 
 ### Frontend
 
-The frontend of Framewrk is not based on any particular frontend framework. We use SCSS as a preprocessor, with perhaps a few choice elements extracted from sources here and there (for example, i below the logic for tooltips is a snippet from Bootstrap, but there was never an intention to import the entire Bootstrap library).
+The frontend of Framewrk is not based on any particular frontend framework. We use LESS as a preprocessor, with perhaps a few choice elements extracted from sources here and there (for example, i below the logic for tooltips is a snippet from Bootstrap, but there was never an intention to import the entire Bootstrap library).
 
-#### Techonlogy
+#### Technology
 
 * Styles are handled in the SCSS syntax of Sass, utilizing the pysass Python library.
 * Styles are bundled upon building the app - we may want to discuss how these bundles are served
