@@ -24,22 +24,25 @@ $(document).ready(function() {
 
   $('.answer-option').on('click', function(event){
     answered = parseInt(event.target.id, 10);
-    console.log(answered);
-  });
+X  });
 
   function showTooltip(event) {
-    console.log(this);
     $(this).find('.answer-tooltip').toggleClass('tooltipActive');
   }
 
   $( '.answer-container' ).mouseenter( showTooltip ).mouseleave( showTooltip );
 
   $('#answer-submit').on('click', function(event){
-    if (answered) {
-      $('.explanation p').css('display', 'none');
-      $('.answer-response.' + answered).css('display', 'inline');
-      next_question();
+    if ($('body').hasClass('question-multiplechoice')) {
+      if (answered) {
+        $('.explanation p').css('display', 'none');
+        $('.answer-response.' + answered).css('display', 'inline');
+        next_question();
+      }
     } else if ($('body').hasClass('question-freeform')) {
+      if ($('.')) {
+
+      }
       $('.explanation p').css('display', 'none');
       $('.answer-response.' + answered).css('display', 'inline');
       next_question();

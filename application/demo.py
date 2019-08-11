@@ -2,7 +2,7 @@
 from flask import url_for, render_template
 from flask import current_app as app
 from flask import Blueprint, request
-from .models import Question
+from .models import Question, FeedItem
 
 demo_bp = Blueprint('demo_bp', __name__)
 
@@ -33,6 +33,18 @@ def signup_complete():
     """Signup complete page."""
     return render_template('/demo/signupcomplete.html',
                            template="signup-template")
+
+
+@demo_bp.route("/feed/", methods=['GET'])
+def feed():
+    """Feed page."""
+    feedItems = FeedItem.query.all()
+    items = [item.__dict__ for item in feedItems]
+    return render_template('/demo/feed.html',
+                           title='Product/Market Fit Workshop',
+                           description='Welcome to the Product/Market Fit Workshop where you’ll learn all about how to make sure people will buy what you’re selling. This workshop is full of interactive exercises that will help you create a strategy on your product/market fit.',
+                           items=items,
+                           template="feed-template")
 
 
 @demo_bp.route("/question/<int:num>/", methods=['GET'])

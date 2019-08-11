@@ -22,7 +22,8 @@ nav {
     .menu {
       display: flex;
       justify-content: left;
-      width: 50%;
+      align-items: center;
+      width: 70%;
       margin: 0;
       padding: 0;
       @media(max-width: 800px) {
@@ -30,14 +31,34 @@ nav {
         justify-content: space-between;
       }
 
+      .close-button {
+        width: 30px;
+        transition: all .2s ease-out;
+
+        &:hover {
+          cursor: pointer;
+          opacity: .7;
+        }
+      }
+
       li {
         color: #212529;
         list-style: none;
         margin-right: 50px;
-        font-size: 1.2em;
         line-height: 1;
         @media(max-width: 800px) {
           margin-right: 0;
+        }
+
+        &.active {
+          color: #4fba9a !important;
+          padding: 10px 15px;
+          border: 2px solid #4fba9a;
+          background: none !important;
+
+          * {
+            color: #4fba9a !important;
+          }
         }
 
         a {
@@ -58,6 +79,7 @@ nav {
       text-transform: uppercase;
       color: #9B9B9B;
       line-height: 1;
+      font-size: .8em;
       @media(max-width: 800px) {
         display: none;
       }

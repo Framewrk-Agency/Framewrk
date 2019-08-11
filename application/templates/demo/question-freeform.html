@@ -2,7 +2,7 @@
 
 
 {% block pagestyles %}
-<link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -51,5 +51,5 @@
 {% include 'demo/nav.html' %}
 
 {% block additionalscripts %}
-<script src="{{ url_for('static', filename='dist/js/demo.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='dist/js/demo.min.js') }}"></script>
 {% endblock %}

@@ -1,0 +1,222 @@
+@import "variables";
+@import "fonts";
+
+.feed-template {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../../img/demo/coworking.webp");
+  background-size: cover;
+  font-family: 'Futura-Medium', sans-serif;
+
+  .container {
+    max-width: unset !important;
+    padding: 0 !important;
+  }
+
+  button {
+    font-family: 'Futura-Medium', sans-serif;
+    -webkit-appearance: none;
+    border: 0;
+    padding: 15px;
+    outline: none;
+    transition: all .2s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      background: white !important;
+      color: black !important;
+      outline: none;
+    }
+  }
+
+  .feed-container {
+    display: flex;
+    justify-content: space-between;
+
+    .sidebar {
+      width: 400px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-rows: 225px 225px 225px 225px;
+
+      .feed-card {
+        padding: 15px;
+        background: #F7F4E7;
+        transition: all .2s ease-out;
+
+        &:hover {
+          background:  #4A4A4A;
+          color: #F7F4E7;
+          cursor: pointer;
+
+          .preview-image {
+            opacity: .7;
+          }
+        }
+
+        .preview-image {
+          width: 100%;
+          background-size: cover;
+          height: 150px;
+          margin-bottom: 20px;
+          position: relative;
+          transition: all .2s ease-out;
+
+          .icon {
+            width: 50px;
+            margin: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+          }
+        }
+
+        .feed-card-title {
+          font-size: 1em;
+          margin: 0;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      padding: 6%;
+
+      .feed-header {
+        padding: 30px;
+        background: #F7F4E7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          margin: 0;
+          color: #4A4A4A;
+          font-size: 2em;
+        }
+
+        .logo {
+          display: block;
+          width: 150px;
+          height: auto;
+          transition: all .2s ease-out;
+
+          img {
+            width: 100%;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: .7;
+          }
+        }
+      }
+
+      .content-split {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2fr 1fr;
+        margin-top: 10px;
+
+        .content-detail {
+
+          .content-detail-buttons {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+              width: 48%;
+            }
+
+            .roadmap-button {
+              background: #F7F4E7;
+            }
+
+            .work-button {
+              background: #4A4A4A;
+              color: white;
+            }
+          }
+
+          .main-card {
+            padding: 30px;
+            background: #F7F4E7;
+            margin: 10px 0 0;
+
+            .main-card-image {
+              width: 100%;
+            }
+
+            .main-card-description {
+              margin: 30px 0;
+              color: #9B9B9B;
+            }
+
+            .open-button {
+              -webkit-appearance: none;
+              border: 0;
+              width: 100%;
+              background: #4FBA9A;
+              color: white;
+              font-family: 'Futura-Medium', sans-serif;
+            }
+          }
+        }
+
+        .content-social {
+
+          button {
+            width: 100%;
+            color: white;
+            margin-bottom: 10px;
+          }
+
+          .facebook-button {
+            background: #3F51B5;
+          }
+
+          .twitter-button {
+            background: #03A9F4;
+          }
+
+          .notes {
+            background: #F7F4E7;
+            padding: 30px;
+
+            .notes-font-options {
+              margin-bottom: 20px;
+              padding-bottom: 20px;
+              border-bottom: 1px solid #e0e0e0;
+
+              i {
+                color: #4A4A4A;
+                font-size: 1.3em;
+                margin-right: 20px;
+                transition: all .2s ease-out;
+
+                &.fa-file-excel {
+                  color: #006f3b;
+                }
+
+                &:hover {
+                  cursor: pointer;
+                  opacity: .7;
+                }
+              }
+            }
+
+            .notes-input {
+              background: none;
+              border: none;
+              color: grey;
+              width: 100%;
+              outline: none;
+              font-family: 'Futura-Light', sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+}

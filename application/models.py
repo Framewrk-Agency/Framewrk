@@ -68,3 +68,20 @@ class Question(db.Model):
     value = db.Column(db.Text,
                       nullable=False,
                       unique=False)
+
+
+class FeedItem(db.Model):
+    """Model for feed items."""
+    __tablename__ = 'feed'
+
+    id = db.Column(db.Integer,
+                   primary_key=True)
+    type = db.Column(db.String,
+                     nullable=False,
+                     unique=False)
+    title = db.Column(db.Text,
+                      nullable=False,
+                      unique=False)
+    image = db.Column(db.Text,
+                      nullable=False,
+                      unique=False)

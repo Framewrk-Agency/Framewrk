@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+
+{% block pagestyles %}
+  <link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="feed-container">
+  <aside class="sidebar">
+    {% for item in items %}
+    <div class="feed-card">
+      <div class="preview-image" style="background-image: url('/static/img/demo/{{item.image}}')">
+        {% if item.type == 'video' %}
+          <img src="{{ url_for('static', filename='img/demo/icons/feed/play.svg') }}" class="icon">
+        {% endif %}
+
+        {% if item.type == 'audio' %}
+          <img src="{{ url_for('static', filename='img/demo/icons/feed/audio.svg') }}" class="icon">
+        {% endif %}
+
+        {% if item.type == 'article' %}
+          <img src="{{ url_for('static', filename='img/demo/icons/feed/article.svg') }}" class="icon">
+        {% endif %}
+      </div>
+      <h4 class="feed-card-title">{{item.title}}</h4>
+    </div>
+    {% endfor %}
+  </aside>
+  <main class="content">
+    <header class="feed-header">
+      <h1>{{title}}</h1>
+      <a href="{{ url_for('demo_bp.demo') }}" class="logo">
+        <img src="{{ url_for('static', filename='img/logo/logo-dark.svg') }}">
+      </a>
+    </header>
+    <div class="content-split">
+      <div class="content-detail">
+        <div class="content-detail-buttons">
+          <button class="roadmap-button"> Add to roadmap </button>
+          <button class="work-button"> Let's work! </button>
+        </div>
+        <div class="main-card">
+          <img src="{{ url_for('static', filename='img/demo/main-card.jpg') }}" class="main-card-image">
+          <p class="main-card-description">{{description}}</p>
+          <button class="open-button">Open the workshop!</button>
+        </div>
+      </div>
+      <div class="content-social">
+        <button class="facebook-button">Share to Facebook</button>
+        <button class="twitter-button">Share to Twitter</button>
+        <div class="notes">
+          <div class="notes-font-options">
+            <i class="far fa-bold"></i>
+            <i class="far fa-italic"></i>
+            <i class="far fa-underline"></i>
+            <i class="far fa-heading"></i>
+            <i class="far fa-file-excel"></i>
+          </div>
+          <input type="text" name="fname" placeholder="Type notes here…" class="notes-input">
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+{% include 'demo/nav.html' %}
+
+{% block additionalscripts %}
+  <script src="{{ url_for('static', filename='dist/js/demo.min.js') }}"></script>
+  <script>
+    $('nav .menu .feed').addClass('active');
+  </script>
+{% endblock %}

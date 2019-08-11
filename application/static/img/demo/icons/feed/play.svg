@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon / playiOS</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-/-play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon---play">
+            <path d="M11,0 L11,2 L2,2 L2,48 L11,48 L11,50 L0,50 L0,0 L11,0 Z M39,0 L50,0 L50,50 L39,50 L39,48 L48,48 L48,2 L39,2 L39,0 Z" id="Combined-Shape" fill="#4FBA9A" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#4FBA9A" x="6" y="6" width="38" height="38"></rect>
+            <polygon id="Path" fill="#FFFFFF" points="20 16 34 25 20 34"></polygon>
+        </g>
+    </g>
+</svg>
