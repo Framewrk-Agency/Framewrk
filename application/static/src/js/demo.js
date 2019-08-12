@@ -8,7 +8,7 @@ $(document).ready(function() {
     var nextQuestion = parseInt(question, 10) + 1;
     setTimeout(function() {
       window.location.replace('/question/' + nextQuestion + '/')
-    }, 2000);
+    }, 1500);
   }
 
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   $('.answer-option').on('click', function(event){
     answered = parseInt(event.target.id, 10);
-X  });
+  });
 
   function showTooltip(event) {
     $(this).find('.answer-tooltip').toggleClass('tooltipActive');
@@ -40,9 +40,6 @@ X  });
         next_question();
       }
     } else if ($('body').hasClass('question-freeform')) {
-      if ($('.')) {
-
-      }
       $('.explanation p').css('display', 'none');
       $('.answer-response.' + answered).css('display', 'inline');
       next_question();
