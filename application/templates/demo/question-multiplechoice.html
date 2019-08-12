@@ -1,60 +1,16 @@
-{% extends "layout.html" %}
+{% extends "demo/question.html" %}
 
-
-{% block pagestyles %}
-<link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
-{% endblock %}
-
-{% block content %}
-<a href="{{ url_for('demo_bp.demo') }}">
-  <img src="{{ url_for('static', filename='img/logo/logo.png') }}" id="Logo">
-</a>
-
-<video autoplay muted loop id="BackgroundVideo">
-  <source src="https://framewrk.nyc3.cdn.digitaloceanspaces.com/videos/Waterfall.mp4" type="video/mp4">
-</video>
-
-<div class="layout">
-  <div class="grid">
-
-    <div class="question">
-      <div class="question-background">
-        <h1>Q+A</h1>
-        <i class="fas fa-question-circle"></i>
-        <p class="question-copy">{{question}}</p>
-      </div>
-      <div class="buttons">
-        <button class="skip-button">Skip</button>
-        <button class="answer-button">Answer</button>
-      </div>
+{% block answer %}
+<div class="answer">
+  <div class="answer-background">
+    <p>Choose your answer</p>
+    {% for choice in choices %}
+    <div class="answer-container">
+      <div class="answer-tooltip">{{ tooltips[loop.index] }}</div>
+      <button class="answer-option" id="{{loop.index}}">{{choice}}</button>
     </div>
-
-    <div class="answer">
-      <div class="answer-background">
-        <p>Choose your answer</p>
-        {% for choice in choices %}
-        <div class="answer-container">
-          <div class="answer-tooltip">{{ tooltips[loop.index] }}</div>
-          <button class="answer-option" id="{{loop.index}}">{{choice}}</button>
-        </div>
-        {% endfor %}
-      </div>
-      <button id="answer-submit" class="submit">Submit Answer</button>
-    </div>
-
-    <div class="explanation">
-      <p>{{explanation}}</p>
-      {% for response in responses %}
-        <p class="answer-response {{loop.index}}">{{response}}</p>
-      {% endfor %}
-    </div>
-
+    {% endfor %}
   </div>
+  <button id="answer-submit" class="submit">Submit Answer</button>
 </div>
-{% endblock %}
-
-{% include 'demo/nav.html' %}
-
-{% block additionalscripts %}
-<script src="{{ url_for('static', filename='dist/js/demo.min.js') }}"></script>
 {% endblock %}

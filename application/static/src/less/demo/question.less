@@ -18,7 +18,7 @@
   position: absolute;
   width: 150px;
   top: 40px;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   @media(max-width: 600px) {
     right: 0;
     margin: auto;
@@ -26,14 +26,31 @@
   }
 
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
     cursor: pointer;
   }
 }
 
-.question-multiplechoice,
+.submit {
+  -webkit-appearance: none;
+  background: #4FBA9A;
+  color: white;
+  transition: all 0.2s ease-out;
+  border: 0;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 0 3px #929292;
+
+  &:hover {
+    cursor: pointer;
+    background: white;
+    color: #4FBA9A;
+  }
+}
+
+
 .question-freeform,
- {
+.question-multiplechoice {
   font-family: 'Futura-Medium', sans-serif;
   font-size: 14px;
   background: black;
@@ -176,7 +193,7 @@
                 top: -10px;
                 width: 100%;
                 z-index: 20;
-                transition: all .2s ease-out;
+                transition: all 0.2s ease-out;
                 display: none;
                 opacity: 0;
               }
@@ -202,38 +219,32 @@
               }
             }
           }
-
-          .submit {
-            -webkit-appearance: none;
-            background: #4FBA9A;
-            color: white;
-            transition: all 0.2s ease-out;
-            border: 0;
-            padding: 15px;
-            width: 100%;
-            box-shadow: 0 0 3px #929292;
-
-            &:hover {
-              cursor: pointer;
-              background: white;
-              color: #4FBA9A;
-            }
-          }
         }
 
-        .explanation {
-          background: #4A4A4A;
-          color: white;
-          padding: 20px;
-          height: fit-content;
-          box-shadow: 0 0 3px #353535;
+        .right-split {
+          .explanation {
+            background: #4A4A4A;
+            color: white;
+            padding: 20px;
+            height: fit-content;
+            margin-bottom: 10px;
+            box-shadow: 0 0 3px #353535;
 
-          .answer-response {
-            display: none;
+            .answer-response {
+              display: none;
+            }
+
+            .answer-alert {
+              display: none;
+            }
+
+            p {
+              margin-bottom: 0;
+            }
           }
 
-          p {
-            margin-bottom: 0;
+          #next-question {
+            display: none;
           }
         }
       }

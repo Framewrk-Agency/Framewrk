@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+
+{% block pagestyles %}
+<link href="{{ url_for('static', filename='dist/css/demo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<a href="{{ url_for('demo_bp.demo') }}">
+  <img src="{{ url_for('static', filename='img/logo/logo.png') }}" id="Logo">
+</a>
+
+<video autoplay muted loop id="BackgroundVideo">
+  <source src="https://framewrk.nyc3.cdn.digitaloceanspaces.com/videos/Waterfall.mp4" type="video/mp4">
+</video>
+
+<div class="layout">
+  <div class="grid">
+
+    <div class="question">
+      <div class="question-background">
+        <h1>Q+A</h1>
+        <i class="fas fa-question-circle"></i>
+        <p class="question-copy">{{question}}</p>
+      </div>
+      <div class="buttons">
+        <button class="skip-button">Skip</button>
+        <button class="answer-button">Answer</button>
+      </div>
+    </div>
+
+    {% block answer %}
+
+    {% endblock %}
+
+    <div class="right-split">
+      <div class="explanation">
+        <p class="explanation-description">{{explanation}}</p>
+        {% if responses %}
+          {% for response in responses %}
+            <p class="answer-response {{loop.index}}">{{response}}</p>
+            {% endfor %}
+        {% else %}
+          <p class="answer-alert"><i class="far fa-exclamation-triangle"></i> David needs to provide a response for this question :P.</p>
+        {% endif %}
+      </div>
+      <button id="next-question" class="submit">Next question!</button>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% include 'demo/partials/nav.html' %}
+
+{% block additionalscripts %}
+<script src="{{ url_for('static', filename='dist/js/demo.min.js') }}"></script>
+{% endblock %}
